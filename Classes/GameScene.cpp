@@ -19,5 +19,10 @@ bool GameScene::init()
 	{
 		return false;
 	}
+
+	Sprite* background = Sprite::create("Temp_Background.png");
+	background->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+	this->addChild(background);
+
 	return true;
 }

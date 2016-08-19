@@ -2,6 +2,7 @@
 #define _GameScene_H_
 
 #include "cocos2d.h"
+#include "UserRule.h"
 
 class GameScene 
 	: public cocos2d::Layer
