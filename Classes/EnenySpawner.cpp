@@ -38,24 +38,26 @@ bool EnemySpawner::init(const size_t poolSize, const std::initializer_list<std::
 	return true;
 }
 
-float EnemySpawner::delayRandom()
+float EnemySpawner::random_float(float min, float max)
 {
 	std::random_device seed;
 	std::mt19937 device(seed());
+	std::uniform_real_distribution<float> dist(min, max);
+	return dist(device);
+}
 
+float EnemySpawner::delayRandom()
+{
 	switch (GameManager::getInstance()->getDifficulty())
 	{
 	case Difficulty::Easy:
-		std::uniform_int_distribution<> dist(4, 6);
-		return dist(device);
+		return random_float(4.0f, 6.0f);
 
 	case Difficulty::Normal:
-		std::uniform_int_distribution<> dist(3, 5);
-		return dist(device);
+		return random_float(3.0f, 5.0f);
 
 	case Difficulty::Hard:
-		std::uniform_int_distribution<> dist(1, 2);
-		return dist(device);
+		return random_float(1.0f, 2.0f);
 	}
 }
 

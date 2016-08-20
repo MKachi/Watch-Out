@@ -22,6 +22,7 @@ namespace cocos2d
 		float		_spawnDelayCount[6];
 
 		bool init(const size_t poolSize, const std::initializer_list<std::string>& imageList, const std::initializer_list<SpawnPoint>& spawnPoints, Node* layer);
+		float random_float(float min, float max);
 		float delayRandom();
 		Enemy* getUseableEnemy();
 

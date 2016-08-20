@@ -34,7 +34,7 @@ int Enemy::randomIndex()
 {
 	std::random_device seed;
 	std::mt19937 device(seed());
-	std::uniform_int_distribution<> dist(0, _imageList.size());
+	std::uniform_int_distribution<int> dist(0, _imageList.size());
 	return dist(device);
 }
 

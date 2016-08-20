@@ -56,6 +56,10 @@ bool GameScene::init()
 		friendly[i]->setBackPosition(friendly[i]->getPosition());
 		this->addChild(friendly[i], Depth::Friendly);
 
+		Sprite* enemy = Sprite::create("Temp_Car.png");
+		enemy->setPosition(SCREEN_WIDTH / 2 + 475, y + 105);
+		this->addChild(enemy, 99);
+
 		y -= 320.0f;
 	}
 
@@ -64,6 +68,8 @@ bool GameScene::init()
 	pauseClickColor = Color3B(125, 125, 125);
 	pauseButton->setPosition(SCREEN_WIDTH / 2 + 300, SCREEN_HEIGHT / 2 + 580);
 	this->addChild(pauseButton, Depth::PauseButton);
+
+//	spawner = EnemySpawner::create(10, { "Temp_Car.png", }, {}, this);
 
 	auto listener = EventListenerTouchAllAtOnce::create();
 	listener->onTouchesBegan = CC_CALLBACK_2(GameScene::onTouchesBegan, this);
@@ -76,7 +82,7 @@ bool GameScene::init()
 
 void GameScene::Update(float dt)
 {
-
+//	spawner->update(dt);
 }
 
 void GameScene::showPausePopUp()
