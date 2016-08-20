@@ -1,8 +1,9 @@
-﻿#ifndef	_GameScene_H_
-#define _GameScene_H_
+﻿#pragma once
 
 #include "cocos2d.h"
 #include "UserRule.h"
+#include "Floor.h"
+#include "Friendly.h"
 
 class GameScene 
 	: public cocos2d::Layer
@@ -13,6 +14,23 @@ public:
     virtual bool init();
     
     CREATE_FUNC(GameScene);
-};
 
-#endif
+	cocos2d::Sprite* backGround;
+
+	// PauseButton
+	cocos2d::Sprite* pauseButton;
+	cocos2d::Color3B pauseOriginColor;
+	cocos2d::Color3B pauseClickColor;
+	int pauseTouchID;
+
+	cocos2d::Floor* floor[3];
+	cocos2d::Friendly* friendly[3];
+
+	void showPausePopUp();
+	void onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
+	void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
+	void onTouchesMoved(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
+
+	void Update(float dt);
+
+};

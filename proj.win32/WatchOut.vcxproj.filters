@@ -13,6 +13,12 @@
     <Filter Include="src\GameScene">
       <UniqueIdentifier>{a0574572-a307-4d6f-b4e9-f3c1e0a4228b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Object">
+      <UniqueIdentifier>{389fe0c9-5bed-47da-ab6c-b48b29b5fe01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Managers">
+      <UniqueIdentifier>{d36cf23a-23df-4fde-9b5b-5413e356233f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -23,6 +29,18 @@
     </ClCompile>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Friendly.cpp">
+      <Filter>src\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameManager.cpp">
+      <Filter>src\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Floor.cpp">
+      <Filter>src\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnenySpawner.cpp">
+      <Filter>src\Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -37,6 +55,18 @@
     </ClInclude>
     <ClInclude Include="..\Classes\UserRule.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Friendly.h">
+      <Filter>src\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameManager.h">
+      <Filter>src\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Floor.h">
+      <Filter>src\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnenySpawner.h">
+      <Filter>src\Object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

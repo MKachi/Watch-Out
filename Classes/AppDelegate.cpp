@@ -1,15 +1,17 @@
 ﻿#include "AppDelegate.h"
 #include "UserRule.h"
+#include "GameScene.h"
+#include "GameManager.h"
 
 USING_NS_CC;
-
-static cocos2d::Size designResolutionSize = cocos2d::Size(720, 1280);
 
 AppDelegate::AppDelegate()
 {	}
 
 AppDelegate::~AppDelegate()
-{	}
+{	
+	GameManager::destroy();
+}
 
 void AppDelegate::initGLContextAttrs()
 {
@@ -34,6 +36,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 	director->setDisplayStats(true);
 	director->setAnimationInterval(1.0f / 60);
 	
+//	glview->setFrameSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 	glview->setDesignResolutionSize(SCREEN_WIDTH, SCREEN_HEIGHT, ResolutionPolicy::SHOW_ALL);
 	register_all_packages();
 
