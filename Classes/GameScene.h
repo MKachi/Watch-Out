@@ -4,6 +4,7 @@
 #include "UserRule.h"
 #include "Floor.h"
 #include "Friendly.h"
+#include "EnenySpawner.h"
 
 class GameScene 
 	: public cocos2d::Layer
@@ -25,6 +26,9 @@ public:
 
 	cocos2d::Floor* floor[3];
 	cocos2d::Friendly* friendly[3];
+
+	cocos2d::EnemySpawner* spawner;
+	cocos2d::SpawnPoint spawnPoint;
 
 	void showPausePopUp();
 	void onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;

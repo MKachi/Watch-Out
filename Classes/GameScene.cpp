@@ -55,6 +55,7 @@ bool GameScene::init()
 		friendly[i]->setPosition(SCREEN_WIDTH / 2, y + 105);
 		friendly[i]->setBackPosition(friendly[i]->getPosition());
 		this->addChild(friendly[i], Depth::Friendly);
+
 		y -= 320.0f;
 	}
 

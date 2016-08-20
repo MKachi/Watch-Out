@@ -22,7 +22,17 @@ void GameManager::destroy()
 	}
 }
 
+void GameManager::setDifficulty(const Difficulty difficulty)
+{
+	_difficulty = difficulty;
+}
+
 void GameManager::setSelectCountrys(const int index, Country country)
 {
 	_country[index] = country;
+}
+
+void GameManager::setTimeScale(float timeScale)
+{
+	_timeScale = timeScale;
 }
