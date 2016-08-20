@@ -8,11 +8,9 @@ namespace cocos2d
 		: public Sprite
 	{
 	private:
-		float	_speed;
+		float	_speed = 300.0f;
 		bool	_moveLeft;
-		std::vector<std::string> _imageList;
 
-		bool init(const std::initializer_list<std::string>& imageList);
 		int randomIndex();
 
 	protected:
@@ -20,7 +18,7 @@ namespace cocos2d
 		virtual ~Enemy();
 
 	public:
-		static Enemy* create(const std::initializer_list<std::string>& imageList);
+		static Enemy* create();
 		void spawn();
 
 		void update(float dt);

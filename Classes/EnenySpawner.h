@@ -12,27 +12,30 @@ namespace cocos2d
 	};
 
 	class EnemySpawner
-		: public Node
 	{
+		enum { POOL_SIZE = 10, };
 	private:
-		std::vector<Enemy*>		_enemys;
-		std::vector<SpawnPoint>		_spawnPoints;
-		size_t		_poolSize;
-		float		_spawnDelay[6];
-		float		_spawnDelayCount[6];
+		Enemy*		_enemys[POOL_SIZE];
+		float		_spawnDelay;
+		float		_spawnDelayCount;
+		std::vector<SpawnPoint> _spawnPoints;
 
-		bool init(const size_t poolSize, const std::initializer_list<std::string>& imageList, const std::initializer_list<SpawnPoint>& spawnPoints, Node* layer);
+		bool init( Node* layer);
 		float random_float(float min, float max);
+		int random_int(int min, int max);
 		float delayRandom();
-		Enemy* getUseableEnemy();
 
 	protected:
 		EnemySpawner();
 		virtual ~EnemySpawner();
 
 	public:
-		static EnemySpawner* create(const size_t poolSize, const std::initializer_list<std::string>& imageList, const std::initializer_list<SpawnPoint>& spawnPoints, Node* layer);
+		static EnemySpawner* create(Node* layer);
 		void update(float dt);
+
+		void addSpawnPoint(SpawnPoint spawnPoint);
+
+		Enemy* getEnemy(int index) { return _enemys[index]; }
 
 	};
 }

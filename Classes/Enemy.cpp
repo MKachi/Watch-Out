@@ -1,4 +1,6 @@
 ﻿#include "Enemy.h"
+#include "GameManager.h"
+#include "UserRule.h"
 
 using namespace cocos2d;
 
@@ -8,10 +10,10 @@ Enemy::Enemy()
 Enemy::~Enemy()
 {	}
 
-Enemy* Enemy::create(const std::initializer_list<std::string>& imageList)
+Enemy* Enemy::create()
 {
 	Enemy* result = new (std::nothrow) Enemy();
-	if (result != nullptr && result->init(imageList))
+	if (result != nullptr && result->initWithFile("Temp_Car.png"))
 	{
 		result->autorelease();
 		return result;
@@ -19,29 +21,19 @@ Enemy* Enemy::create(const std::initializer_list<std::string>& imageList)
 	return nullptr;
 }
 
-bool Enemy::init(const std::initializer_list<std::string>& imageList)
-{
-	for (auto& iter : imageList)
-	{
-		_imageList.emplace_back(iter);
-	}
-	this->setVisible(false);
-
-	return true;
-}
-
 int Enemy::randomIndex()
 {
-	std::random_device seed;
-	std::mt19937 device(seed());
-	std::uniform_int_distribution<int> dist(0, _imageList.size());
-	return dist(device);
+//	std::random_device seed;
+//	std::mt19937 device(seed());
+//	std::uniform_int_distribution<int> dist(0, GameManager::getInstance()->getEnemyImageCount());
+//	return dist(device);
+	return 0;
 }
 
 void Enemy::spawn()
 {
-	this->setTexture(_imageList[randomIndex()]);
 	this->setVisible(true);
+	this->setTexture(GameManager::getInstance()->getEnemyImage(randomIndex()));
 }
 
 void Enemy::update(float dt)
@@ -53,18 +45,26 @@ void Enemy::update(float dt)
 
 	if (_moveLeft)
 	{
-		this->setPositionX(this->getPositionX() - _speed * dt);
+		if (this->getPositionX() >= SCREEN_WIDTH / 2 + 475)
+		{
+			this->setVisible(false);
+		}
+		this->setPositionX(this->getPositionX() + _speed * dt);
 	}
 	else
 	{
-		this->setPositionX(this->getPositionX() + _speed * dt);
+		if (this->getPositionX() <= SCREEN_WIDTH / 2 - 475)
+		{
+			this->setVisible(false);
+		}
+		this->setPositionX(this->getPositionX() - _speed * dt);
 	}
 }
 
 void Enemy::setMoveLeft(bool left)
 {
 	_moveLeft = left;
-	this->setFlippedX(!left);
+	this->setFlippedX(left);
 }
 
 void Enemy::setSpeed(float speed)

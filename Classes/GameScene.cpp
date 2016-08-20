@@ -30,6 +30,8 @@ bool GameScene::init()
 		return false;
 	}
 
+	GameManager::getInstance()->setDifficulty(Difficulty::Hard);
+
 	backGround = Sprite::create("Temp_Background.png");
 	backGround->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 	this->addChild(backGround, Depth::BackGround);
@@ -41,6 +43,7 @@ bool GameScene::init()
 		Rect(0, 0, 720, 320),
 	};
 
+	spawner = EnemySpawner::create(this);
 	float y = SCREEN_HEIGHT / 2 + 220;
 	for (int i = 0; i < 3; ++i)
 	{
@@ -56,9 +59,13 @@ bool GameScene::init()
 		friendly[i]->setBackPosition(friendly[i]->getPosition());
 		this->addChild(friendly[i], Depth::Friendly);
 
-		Sprite* enemy = Sprite::create("Temp_Car.png");
-		enemy->setPosition(SCREEN_WIDTH / 2 + 475, y + 105);
-		this->addChild(enemy, 99);
+		spawnPoint[i].position = Vec2(SCREEN_WIDTH / 2 + 475, y + 105);
+		spawnPoint[i].left = false;
+		spawner->addSpawnPoint(spawnPoint[i]);
+
+		spawnPoint[i + 1].position = Vec2(SCREEN_WIDTH / 2 - 475, y + 105);
+		spawnPoint[i + 1].left = true;
+		spawner->addSpawnPoint(spawnPoint[i + 1]);
 
 		y -= 320.0f;
 	}
@@ -69,7 +76,7 @@ bool GameScene::init()
 	pauseButton->setPosition(SCREEN_WIDTH / 2 + 300, SCREEN_HEIGHT / 2 + 580);
 	this->addChild(pauseButton, Depth::PauseButton);
 
-//	spawner = EnemySpawner::create(10, { "Temp_Car.png", }, {}, this);
+	GameManager::getInstance()->pushEnemyImage("Temp_Car.png");
 
 	auto listener = EventListenerTouchAllAtOnce::create();
 	listener->onTouchesBegan = CC_CALLBACK_2(GameScene::onTouchesBegan, this);
@@ -77,12 +84,14 @@ bool GameScene::init()
 	listener->onTouchesEnded = CC_CALLBACK_2(GameScene::onTouchesEnded, this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 
+	this->schedule(schedule_selector(GameScene::update));
+
 	return true;
 }
 
-void GameScene::Update(float dt)
+void GameScene::update(float dt)
 {
-//	spawner->update(dt);
+	spawner->update(dt);
 }
 
 void GameScene::showPausePopUp()

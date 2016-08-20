@@ -18,10 +18,15 @@ namespace cocos2d
 		Country			_country[3];
 		Difficulty		_difficulty;
 		float			_timeScale = 1.0f;
+		std::vector<std::string> _enemyImages;
 
 	public:
 		static GameManager* getInstance();
 		static void destroy();
+
+		void pushEnemyImage(const std::string& filename);
+		size_t getEnemyImageCount() { return _enemyImages.size(); }
+		const std::string& getEnemyImage(int index) { return _enemyImages[index]; }
 
 		void setDifficulty(const Difficulty difficulty);
 		Difficulty getDifficulty() { return _difficulty; }

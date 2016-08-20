@@ -22,6 +22,11 @@ void GameManager::destroy()
 	}
 }
 
+void GameManager::pushEnemyImage(const std::string& filename)
+{
+	_enemyImages.push_back(filename);
+}
+
 void GameManager::setDifficulty(const Difficulty difficulty)
 {
 	_difficulty = difficulty;

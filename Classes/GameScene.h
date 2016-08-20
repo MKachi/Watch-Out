@@ -28,13 +28,13 @@ public:
 	cocos2d::Friendly* friendly[3];
 
 	cocos2d::EnemySpawner* spawner;
-	cocos2d::SpawnPoint spawnPoint;
+	cocos2d::SpawnPoint spawnPoint[6];
 
 	void showPausePopUp();
 	void onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
 	void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
 	void onTouchesMoved(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
 
-	void Update(float dt);
+	void update(float dt);
 
 };
