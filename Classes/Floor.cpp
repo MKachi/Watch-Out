@@ -1,5 +1,6 @@
 ﻿#include "Floor.h"
 #include "Friendly.h"
+#include "UserRule.h"
 
 using namespace cocos2d;
 
@@ -46,6 +47,17 @@ void Floor::dropCheck(Friendly* friendly)
 
 		if (dropArea.intersectsRect(friendly->getBoundingBox()))
 		{
+			float x = friendly->getPosition().x;
+			if (x < 48.0f)
+			{
+				x = 58.0f;
+			}
+			else if (x > SCREEN_WIDTH - 48.0f)
+			{
+				x = SCREEN_WIDTH - 48.0f;
+			}
+
+			friendly->setPositionX(x);
 			friendly->setPositionY(_floorY);
 			friendly->setInLine(true);
 			friendly->setMove(false);

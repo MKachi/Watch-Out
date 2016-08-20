@@ -9,8 +9,10 @@ namespace cocos2d
 	{
 	private:
 		float	_speed = 300.0f;
+		float	_originY = 0.0f;
 		bool	_moveLeft;
 
+		bool init();
 		int randomIndex();
 
 	protected:

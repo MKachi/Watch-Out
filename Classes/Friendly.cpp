@@ -1,4 +1,5 @@
 ﻿#include "Friendly.h"
+#include "GameManager.h"
 
 using namespace cocos2d;
 
@@ -24,7 +25,6 @@ bool Friendly::init(Country country)
 {
 	_country = country;
 	_move = false;
-	_die = false;
 	this->setContentSize(Size(95, 155));
 	countryImage(country);
 
@@ -66,11 +66,26 @@ void Friendly::setTouchID(const int id)
 void Friendly::setMove(const bool move)
 {
 	_move = move;
+	if (_move)
+	{
+		GameManager::getInstance()->setCatchCount(GameManager::getInstance()->getCatchCount() + 1);
+	}
+	else
+	{
+		GameManager::getInstance()->setCatchCount(GameManager::getInstance()->getCatchCount() - 1);
+	}
 }
 
-void Friendly::setDie(const bool die)
+void Friendly::die()
 {
-	_die = die;
+	this->setVisible(false);
+	this->setPosition(Vec2::ZERO);
+	_die = true;
+	GameManager::getInstance()->setLifeCount(GameManager::getInstance()->getLifeCount() - 1);
+	if (GameManager::getInstance()->getLifeCount() <= 0)
+	{
+		GameManager::getInstance()->endGame();
+	}
 }
 
 void Friendly::setInLine(const bool inLine)

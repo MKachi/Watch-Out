@@ -41,3 +41,27 @@ void GameManager::setTimeScale(float timeScale)
 {
 	_timeScale = timeScale;
 }
+
+void GameManager::setLifeCount(int count)
+{
+	_lifeCount = count;
+}
+
+void GameManager::setCatchCount(int count)
+{
+	_catchCount = count;
+}
+
+void GameManager::endGame()
+{
+}
+
+void GameManager::setScoreZero()
+{
+	_score = 0;
+}
+
+void GameManager::upScore()
+{
+	_score += (_lifeCount - _catchCount);
+}

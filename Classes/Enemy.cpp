@@ -13,12 +13,21 @@ Enemy::~Enemy()
 Enemy* Enemy::create()
 {
 	Enemy* result = new (std::nothrow) Enemy();
-	if (result != nullptr && result->initWithFile("Temp_Car.png"))
+	if (result != nullptr && result->initWithFile("Temp_Car.png") && result->init())
 	{
 		result->autorelease();
 		return result;
 	}
 	return nullptr;
+}
+
+bool Enemy::init()
+{
+	auto sequence = Sequence::create({ MoveBy::create(0.1f, Vec2(0.0f, 3.0f)), MoveBy::create(0.1f, Vec2(0.0f, -3.0f)) });
+	auto action = RepeatForever::create(sequence);
+	this->runAction(action);
+
+	return true;
 }
 
 int Enemy::randomIndex()
@@ -31,6 +40,7 @@ int Enemy::randomIndex()
 
 void Enemy::spawn()
 {
+	_originY = this->getPositionY();
 	this->setVisible(true);
 	this->setTexture(GameManager::getInstance()->getEnemyImage(randomIndex()));
 }

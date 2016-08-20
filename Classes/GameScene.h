@@ -3,10 +3,11 @@
 #include "cocos2d.h"
 #include "UserRule.h"
 #include "Floor.h"
-#include "Friendly.h"
+#include "GameManager.h"
 #include "EnenySpawner.h"
+#include "Button.h"
 
-class GameScene 
+class GameScene
 	: public cocos2d::Layer
 {
 public:
@@ -16,13 +17,22 @@ public:
     
     CREATE_FUNC(GameScene);
 
-	cocos2d::Sprite* backGround;
+	cocos2d::Sprite* backGround[3];
+	bool backGroundAni[3];
+
+	cocos2d::Color3B ClickColor;
+	cocos2d::Color3B originColor;
 
 	// PauseButton
-	cocos2d::Sprite* pauseButton;
-	cocos2d::Color3B pauseOriginColor;
-	cocos2d::Color3B pauseClickColor;
-	int pauseTouchID;
+	cocos2d::Button* pauseButton;
+
+	// PausePopUp
+	cocos2d::LayerColor* popUpLayer;
+	cocos2d::Sprite* popUpFrame;
+
+	cocos2d::Button* menuButton;
+	cocos2d::Button* cancelButton;
+	cocos2d::Button* retryButton;
 
 	cocos2d::Floor* floor[3];
 	cocos2d::Friendly* friendly[3];
@@ -30,11 +40,11 @@ public:
 	cocos2d::EnemySpawner* spawner;
 	cocos2d::SpawnPoint spawnPoint[6];
 
-	void showPausePopUp();
 	void onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
 	void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
 	void onTouchesMoved(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
 
 	void update(float dt);
+	void scoreUp(float dt);
 
 };

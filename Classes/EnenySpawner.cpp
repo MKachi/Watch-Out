@@ -96,3 +96,11 @@ void EnemySpawner::addSpawnPoint(SpawnPoint spawnPoint)
 {
 	_spawnPoints.push_back(spawnPoint);
 }
+
+void EnemySpawner::setDepth(int depth)
+{
+	for (int i = 0; i < POOL_SIZE;++i)
+	{
+		_enemys[i]->setZOrder(depth);
+	}
+}

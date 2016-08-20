@@ -35,6 +35,9 @@ namespace cocos2d
 
 		void addSpawnPoint(SpawnPoint spawnPoint);
 		Enemy* getEnemy(int index) { return _enemys[index]; }
+		size_t getEnemyCount() { return POOL_SIZE; }
+
+		void setDepth(int depth);
 
 	};
 }
