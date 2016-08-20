@@ -30,7 +30,7 @@ bool GameScene::init()
 		return false;
 	}
 
-	GameManager::getInstance()->setDifficulty(Difficulty::Hard);
+	GameManager::getInstance()->setDifficulty(Difficulty::Easy);
 
 	backGround = Sprite::create("Temp_Background.png");
 	backGround->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
@@ -119,6 +119,7 @@ void GameScene::onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, coco
 				friendly[i]->setInLine(false);
 				friendly[i]->setBackPosition(friendly[i]->getPosition());
 				friendly[i]->setTouchID(touch->getID());
+				friendly[i]->setPosition(touchPoint);
 				return;
 			}
 		}

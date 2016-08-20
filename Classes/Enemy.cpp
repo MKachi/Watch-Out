@@ -23,11 +23,10 @@ Enemy* Enemy::create()
 
 int Enemy::randomIndex()
 {
-//	std::random_device seed;
-//	std::mt19937 device(seed());
-//	std::uniform_int_distribution<int> dist(0, GameManager::getInstance()->getEnemyImageCount());
-//	return dist(device);
-	return 0;
+	std::random_device seed;
+	std::mt19937 device(seed());
+	std::uniform_int_distribution<int> dist(0, GameManager::getInstance()->getEnemyImageCount() - 1);
+	return dist(device);
 }
 
 void Enemy::spawn()

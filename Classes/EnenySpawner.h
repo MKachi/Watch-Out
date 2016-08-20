@@ -20,7 +20,7 @@ namespace cocos2d
 		float		_spawnDelayCount;
 		std::vector<SpawnPoint> _spawnPoints;
 
-		bool init( Node* layer);
+		bool init(Node* layer);
 		float random_float(float min, float max);
 		int random_int(int min, int max);
 		float delayRandom();
@@ -34,7 +34,6 @@ namespace cocos2d
 		void update(float dt);
 
 		void addSpawnPoint(SpawnPoint spawnPoint);
-
 		Enemy* getEnemy(int index) { return _enemys[index]; }
 
 	};

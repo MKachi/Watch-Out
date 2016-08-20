@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "cocos2d.h"
+#include "SkeletonObject.h"
 
 namespace cocos2d
 {
@@ -15,6 +15,7 @@ namespace cocos2d
 		: public Sprite
 	{
 	private:
+		SkeletonObject* _object;
 		Country		_country;
 		Vec2		_backPosition;
 		int			_touchID;
@@ -23,7 +24,7 @@ namespace cocos2d
 		bool		_inLine;
 
 		bool init(Country country);
-		static std::string countryImage(Country country);
+		void countryImage(Country country);
 
 	protected:
 		Friendly();

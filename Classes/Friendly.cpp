@@ -11,7 +11,7 @@ Friendly::~Friendly()
 Friendly* Friendly::create(Country county)
 {
 	Friendly* result = new (std::nothrow) Friendly();
-	if (result != nullptr && result->initWithFile(countryImage(county)) && result->init(county))
+	if (result != nullptr && result->init(county) && result->initWithFile("Temp_Char_KR.png"))
 	{
 		result->autorelease();
 		return result;
@@ -25,20 +25,29 @@ bool Friendly::init(Country country)
 	_country = country;
 	_move = false;
 	_die = false;
+	countryImage(country);
+	this->setContentSize(Size(95, 155));
+
 	return true;
 }
 
-std::string Friendly::countryImage(Country country)
+void Friendly::countryImage(Country country)
 {
 	switch (country)
 	{
 	case Country::Korea:
-		return "Temp_Char_KR.png";
+		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr-sk.csb");
+		break;
+
 	case Country::China:
-		return "Temp_Char_KR.png";
+		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr-sk.csb");
+		break;
+
 	case Country::Japen:
-		return "Temp_Char_KR.png";
+		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr-sk.csb");
+		break;
 	}
+	this->addChild(_object);
 }
 
 void Friendly::setBackPosition(const Vec2& position)
