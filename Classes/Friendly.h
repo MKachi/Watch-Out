@@ -44,7 +44,7 @@ namespace cocos2d
 		void setMove(const bool move);
 		bool isMove() const { return _move; }
 
-		void die();
+		void die(bool left);
 		bool isDie() { return _die; }
 		void setInLine(const bool inLine);
 		bool isInLine() const { return _inLine; }

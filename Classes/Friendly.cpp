@@ -36,20 +36,21 @@ void Friendly::countryImage(Country country)
 	switch (country)
 	{
 	case Country::Korea:
-		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr-sk.csb");
+		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr.csb");
 		break;
 
 	case Country::China:
-		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr-sk.csb");
+		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr.csb");
 		break;
 
 	case Country::Japen:
-		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr-sk.csb");
+		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr.csb");
 		break;
 	}
 
 	Size size = this->getContentSize();
 	_object->getRoot()->setPosition(size.width / 2, size.height / 2 - 20);
+	_object->playAnimation("normal", true);
 	this->addChild(_object);
 }
 
@@ -65,6 +66,11 @@ void Friendly::setTouchID(const int id)
 
 void Friendly::setMove(const bool move)
 {
+	if (_die)
+	{
+		_move = false;
+		return;
+	}
 	_move = move;
 	if (_move)
 	{
@@ -76,10 +82,21 @@ void Friendly::setMove(const bool move)
 	}
 }
 
-void Friendly::die()
+void Friendly::die(bool left)
 {
-	this->setVisible(false);
-	this->setPosition(Vec2::ZERO);
+//	this->setPosition(Vec2::ZERO);
+	if (left)
+	{
+		auto dieMotion = _object->getAction();
+		auto fadeAction = FadeOut::create(1000.0f);
+
+		_object->playAnimation("deathToRight");
+	//	_object->getRoot()->runAction(fadeAction);
+	}
+	else
+	{
+		_object->playAnimation("deathToLeft");
+	}
 	_die = true;
 	GameManager::getInstance()->setLifeCount(GameManager::getInstance()->getLifeCount() - 1);
 	if (GameManager::getInstance()->getLifeCount() <= 0)

@@ -21,5 +21,8 @@ namespace cocos2d
 		static SkeletonObject* create(const std::string& plist, const std::string& csb);
 		Node* getRoot() { return _root; }
 
+		cocostudio::timeline::ActionTimeline* getAction() { return _action; }
+		void playAnimation(const std::string& aniname, bool loop = false);
+
 	};
 }

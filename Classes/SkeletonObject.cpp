@@ -19,6 +19,11 @@ SkeletonObject* SkeletonObject::create(const std::string& plist, const std::stri
 	return nullptr;
 }
 
+void SkeletonObject::playAnimation(const std::string& aniname, bool loop)
+{ // normal, deathToLeft, deathToRight
+	_action->play(aniname, loop);
+}
+
 bool SkeletonObject::init(const std::string& plist, const std::string& csb)
 {
 	SpriteFrameCache* frameCache = SpriteFrameCache::getInstance();

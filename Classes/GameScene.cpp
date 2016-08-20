@@ -192,8 +192,7 @@ void GameScene::update(float dt)
 			{
 				if (friendly[j]->getBoundingBox().intersectsRect(spawner->getEnemy(i)->getBoundingBox()))
 				{
-					// Coll
-					friendly[j]->die();
+					friendly[j]->die(spawner->getEnemy(i)->isMoveLeft());
 				}
 			}
 		}
@@ -202,6 +201,7 @@ void GameScene::update(float dt)
 
 void GameScene::onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event)
 {
+	friendly[0]->die(true);
 	for (auto& touch : touches)
 	{
 		auto touchPoint = touch->getLocation();
