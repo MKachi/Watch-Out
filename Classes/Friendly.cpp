@@ -11,7 +11,7 @@ Friendly::~Friendly()
 Friendly* Friendly::create(Country county)
 {
 	Friendly* result = new (std::nothrow) Friendly();
-	if (result != nullptr && result->init(county) && result->initWithFile("Temp_Char_KR.png"))
+	if (result != nullptr && result->init(county) && result->initWithFile("TouchArea.png"))
 	{
 		result->autorelease();
 		return result;
@@ -25,8 +25,8 @@ bool Friendly::init(Country country)
 	_country = country;
 	_move = false;
 	_die = false;
-	countryImage(country);
 	this->setContentSize(Size(95, 155));
+	countryImage(country);
 
 	return true;
 }
@@ -47,6 +47,9 @@ void Friendly::countryImage(Country country)
 		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr-sk.csb");
 		break;
 	}
+
+	Size size = this->getContentSize();
+	_object->getRoot()->setPosition(size.width / 2, size.height / 2 - 20);
 	this->addChild(_object);
 }
 

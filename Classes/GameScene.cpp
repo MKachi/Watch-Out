@@ -57,6 +57,7 @@ bool GameScene::init()
 		friendly[i] = Friendly::create(GameManager::getInstance()->getSelectCountrys(i));
 		friendly[i]->setPosition(SCREEN_WIDTH / 2, y + 105);
 		friendly[i]->setBackPosition(friendly[i]->getPosition());
+		friendly[i]->setOpacity(0.0f);
 		this->addChild(friendly[i], Depth::Friendly);
 
 		spawnPoint[i].position = Vec2(SCREEN_WIDTH / 2 + 475, y + 105);
