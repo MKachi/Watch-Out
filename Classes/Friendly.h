@@ -9,6 +9,10 @@ namespace cocos2d
 		Korea,
 		China,
 		Japen,
+		Peru,
+		Philippines,
+		Vietnam,
+		CountryEnd,
 	};
 
 	class Friendly

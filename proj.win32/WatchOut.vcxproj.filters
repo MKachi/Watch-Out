@@ -60,6 +60,12 @@
     <ClCompile Include="..\Classes\PopUp.cpp">
       <Filter>src\Object</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\MainPopUp.cpp">
+      <Filter>src\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PopUpManager.cpp">
+      <Filter>src\Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -99,6 +105,15 @@
       <Filter>src\TitleScene</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\PopUp.h">
+      <Filter>src\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainPopUp.h">
+      <Filter>src\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PopUpManager.h">
+      <Filter>src\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TeamPopUp.h">
       <Filter>src\Object</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,6 +4,7 @@
 #include "UserRule.h"
 #include "Button.h"
 #include "PopUp.h"
+#include <forward_list>
 
 class TitleScene
 	: public cocos2d::Layer
@@ -21,9 +22,6 @@ private:
 	cocos2d::Button* startButton;
 	cocos2d::Button* mainPopUpButton;
 	cocos2d::Button* helpPopUpButton;
-
-	cocos2d::PopUp* mainPopUp;
-	std::vector<cocos2d::PopUp*> popUps;
 
 	bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event) override;
 	void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event) override;
