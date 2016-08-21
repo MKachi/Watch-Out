@@ -18,6 +18,7 @@ Friendly* Friendly::create(Country county)
 		return result;
 	}
 	CC_SAFE_DELETE(result);
+
 	return nullptr;
 }
 
@@ -25,6 +26,7 @@ bool Friendly::init(Country country)
 {
 	_country = country;
 	_move = false;
+	_die = false;
 	this->setContentSize(Size(95, 155));
 	countryImage(country);
 
@@ -52,6 +54,12 @@ void Friendly::countryImage(Country country)
 	_object->getRoot()->setPosition(size.width / 2, size.height / 2 - 20);
 	_object->playAnimation("normal", true);
 	this->addChild(_object);
+}
+
+void Friendly::playDieAnimation()
+{
+	_object->playAnimation("deathToRight");
+	_object->runAction(FadeOut::create(1.0f));
 }
 
 void Friendly::setBackPosition(const Vec2& position)
@@ -84,17 +92,26 @@ void Friendly::setMove(const bool move)
 
 void Friendly::die(bool left)
 {
-//	this->setPosition(Vec2::ZERO);
+	if (_die)
+	{
+		return;
+	}
+
+	if (_move)
+	{
+		GameManager::getInstance()->setCatchCount(GameManager::getInstance()->getCatchCount() - 1);
+	}
+
 	if (left)
 	{
-		auto dieMotion = _object->getAction();
-		auto fadeAction = FadeOut::create(1000.0f);
-
+		_alpha = 255.0f;
+		schedule(schedule_selector(Friendly::fadeOut));
 		_object->playAnimation("deathToRight");
-	//	_object->getRoot()->runAction(fadeAction);
 	}
 	else
 	{
+		_alpha = 255.0f;
+		schedule(schedule_selector(Friendly::fadeOut));
 		_object->playAnimation("deathToLeft");
 	}
 	_die = true;
@@ -108,4 +125,20 @@ void Friendly::die(bool left)
 void Friendly::setInLine(const bool inLine)
 {
 	_inLine = inLine;
+}
+
+void Friendly::fadeOut(float dt)
+{
+	if (_alpha <= 0.0f)
+	{
+		this->setPosition(0, 0);
+		unschedule(schedule_selector(Friendly::fadeOut));
+	}
+
+	std::vector<Node*> bones = _object->getBones();
+	_alpha = clampf(_alpha - 250.0f * dt, 0.0f, 255.0f);
+	for (int i = 0; i < bones.size(); ++i)
+	{
+		bones[i]->setOpacity(_alpha);
+	}
 }

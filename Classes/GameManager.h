@@ -49,7 +49,8 @@ namespace cocos2d
 		void setScoreZero();
 		void upScore();
 		int getScore() { return _score; }
+		int getBestScore();
 
-		void endGame();
+		std::function<void()> endGame = [=]() {};
 	};
 }

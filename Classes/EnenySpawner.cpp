@@ -16,6 +16,8 @@ EnemySpawner* EnemySpawner::create(Node* layer)
 	{
 		return result;
 	}
+	CC_SAFE_DELETE(result);
+
 	return nullptr;
 }
 

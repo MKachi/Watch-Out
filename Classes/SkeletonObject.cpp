@@ -16,11 +16,13 @@ SkeletonObject* SkeletonObject::create(const std::string& plist, const std::stri
 		result->autorelease();
 		return result;
 	}
+	CC_SAFE_DELETE(result);
+
 	return nullptr;
 }
 
 void SkeletonObject::playAnimation(const std::string& aniname, bool loop)
-{ // normal, deathToLeft, deathToRight
+{
 	_action->play(aniname, loop);
 }
 
@@ -34,6 +36,23 @@ bool SkeletonObject::init(const std::string& plist, const std::string& csb)
 	_action->gotoFrameAndPlay(0, true);
 	_root->runAction(_action);
 	this->addChild(_root);
+	addChildrenNode(_root);
 
 	return true;
+}
+
+void SkeletonObject::addChildrenNode(Node* target)
+{
+	if (target->getChildrenCount() <= 0)
+	{
+		return;
+	}
+	else
+	{
+		for (int i = 0; i < target->getChildrenCount(); ++i)
+		{
+			_bones.push_back(target->getChildren().at(i));
+			addChildrenNode(target->getChildren().at(i));
+		}
+	}
 }

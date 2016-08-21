@@ -52,10 +52,6 @@ void GameManager::setCatchCount(int count)
 	_catchCount = count;
 }
 
-void GameManager::endGame()
-{
-}
-
 void GameManager::setScoreZero()
 {
 	_score = 0;
@@ -64,4 +60,13 @@ void GameManager::setScoreZero()
 void GameManager::upScore()
 {
 	_score += (_lifeCount - _catchCount);
+}
+
+int GameManager::getBestScore()
+{
+	if (UserDefault::getInstance()->getIntegerForKey("BestScore") < _score)
+	{
+		UserDefault::getInstance()->setIntegerForKey("BestScore", _score);
+	}
+	return UserDefault::getInstance()->getIntegerForKey("BestScore");
 }

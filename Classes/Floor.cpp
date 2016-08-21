@@ -18,6 +18,8 @@ Floor* Floor::create(const std::string& filename, const float floorY)
 		result->autorelease();
 		return result;
 	}
+	CC_SAFE_DELETE(result);
+
 	return nullptr;
 }
 

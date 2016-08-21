@@ -1,5 +1,6 @@
 ﻿#include "GameScene.h"
 #include "SimpleAudioEngine.h"
+#include <sstream>
 
 USING_NS_CC;
 
@@ -36,9 +37,9 @@ bool GameScene::init()
 
 	std::string backGroundNames[]=
 	{
-		"Temp_Background.png",  // Hard
-		"Temp_Car.png", // Normal
-		"Temp_Background3.png", // Easy
+		"Background1.png", 
+		"Background2.png", 
+		"Background3.png", 
 	};
 
 	for (int i = 0; i < 3; ++i)
@@ -64,6 +65,7 @@ bool GameScene::init()
 		GameManager::getInstance()->setSelectCountrys(i, Country::Korea);
 
 		floor[i] = Floor::create("Temp_Platform.png", y + 105);
+		floor[i]->setOpacity(0.0f);
 		floor[i]->setPosition(SCREEN_WIDTH / 2, y);
 		floor[i]->initArea(area[i], this);
 		this->addChild(floor[i], Depth::Platform);
@@ -98,6 +100,15 @@ bool GameScene::init()
 	this->addChild(pauseButton, Depth::PauseButton);
 
 	GameManager::getInstance()->pushEnemyImage("Temp_Car.png");
+	GameManager::getInstance()->endGame = [=]()
+	{
+		unschedule(schedule_selector(GameScene::update));
+		unschedule(schedule_selector(GameScene::scoreUp));
+
+		resultLayer->setPositionY(SCREEN_HEIGHT);
+		setResultPopUp(true);
+		schedule(schedule_selector(GameScene::delayTimer), 0.5f);
+	};
 
 	popUpLayer = LayerColor::create(Color4B(0, 0, 0, 191), SCREEN_WIDTH, SCREEN_HEIGHT);
 	popUpLayer->setVisible(false);
@@ -135,6 +146,50 @@ bool GameScene::init()
 	};
 	popUpFrame->addChild(retryButton);
 
+	resultLayer = LayerColor::create(Color4B(0, 0, 0, 191), SCREEN_WIDTH, SCREEN_HEIGHT * 2);
+	resultLayer->setPosition(0.0f, 0.0f);
+	resultLayer->setVisible(false);
+	this->addChild(resultLayer, Depth::PausePopUp);
+
+	resultFrame = Sprite::create("PopUpFrame.png");
+	resultFrame->setPosition(Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2));
+	resultLayer->addChild(resultFrame);
+
+	resultTitle = Sprite::create("result/result_title.png");
+	resultTitle->setPosition(Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 450));
+	resultLayer->addChild(resultTitle);
+
+	Sprite* resultInfo = Sprite::create("result/resultInfo.png");
+	resultInfo->setPosition(Vec2(SCREEN_WIDTH / 2 - 65, SCREEN_HEIGHT / 2 - 150));
+	resultLayer->addChild(resultInfo);
+
+	trophy = Sprite::create("result/Gold.png");
+	trophy->setPosition(Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 200));
+	resultLayer->addChild(trophy);
+
+	bestScore = LabelTTF::create("", "font/verdana.ttf", 44.0f);
+	bestScore->setPosition(Vec2(SCREEN_WIDTH / 2 + 40, SCREEN_HEIGHT / 2 - 65));
+	bestScore->setAnchorPoint(Vec2(0.0f, 0.5f));
+	resultLayer->addChild(bestScore);
+
+	score = LabelTTF::create("", "font/verdana.ttf", 44.0f);
+	score->setPosition(Vec2(SCREEN_WIDTH / 2 + 40, SCREEN_HEIGHT / 2 - 145));
+	score->setAnchorPoint(Vec2(0.0f, 0.5f));
+	resultLayer->addChild(score);
+
+	obtain = LabelTTF::create("", "font/verdana.ttf", 44.0f);
+	obtain->setPosition(Vec2(SCREEN_WIDTH / 2 + 40, SCREEN_HEIGHT / 2 - 235));
+	obtain->setAnchorPoint(Vec2(0.0f, 0.5f));
+	resultLayer->addChild(obtain);
+
+	confirmButton = Button::create("result/ConfirmButton.png", Color3B(125, 125, 125));
+	confirmButton->setPosition(Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 425));
+	confirmButton->click = [=]()
+	{
+		// goto Title
+	};
+	resultLayer->addChild(confirmButton);
+
 	auto listener = EventListenerTouchAllAtOnce::create();
 	listener->onTouchesBegan = CC_CALLBACK_2(GameScene::onTouchesBegan, this);
 	listener->onTouchesMoved = CC_CALLBACK_2(GameScene::onTouchesMoved, this);
@@ -150,6 +205,20 @@ bool GameScene::init()
 void GameScene::scoreUp(float dt)
 {
 	GameManager::getInstance()->upScore();
+}
+
+void GameScene::delayTimer(float dt)
+{
+	this->unschedule(schedule_selector(GameScene::delayTimer));
+	auto action = EaseBackInOut::create(MoveTo::create(2.0f, Vec2(0.0f, 0.0f)));
+	resultLayer->runAction(action);
+}
+
+std::string GameScene::intToString(int value)
+{
+	std::stringstream ss("");
+	ss << value;
+	return ss.str();
 }
 
 void GameScene::update(float dt)
@@ -182,7 +251,6 @@ void GameScene::update(float dt)
 	}
 
 	spawner->update(dt);
-	CCLOG("%d\n", GameManager::getInstance()->getScore());
 
 	for (int i = 0; i < spawner->getEnemyCount(); ++i)
 	{
@@ -199,13 +267,45 @@ void GameScene::update(float dt)
 	}
 }
 
+void GameScene::setResultPopUp(bool active)
+{
+	int gameScore = GameManager::getInstance()->getScore();
+	bestScore->setString(intToString(GameManager::getInstance()->getBestScore()));
+	score->setString(intToString(gameScore));
+	obtain->setString(intToString(gameScore));
+
+	if (gameScore >= 30)
+	{
+		trophy->setTexture("result/Gold.png");
+	}
+	else if (gameScore >= 20)
+	{
+		trophy->setTexture("result/Silver.png");
+	}
+	else if (gameScore >= 10)
+	{
+		trophy->setTexture("result/Bronze.png");
+	}
+	resultLayer->setVisible(active);
+}
+
+void GameScene::downResultPopUp(float dt)
+{
+	if (resultLayer->getPositionY() <= 0.0f)
+	{
+		resultLayer->setPositionY(0.0f);
+		unschedule(schedule_selector(GameScene::downResultPopUp));
+		return;
+	}
+	resultLayer->setPositionY(resultLayer->getPositionY() + 250 * dt);
+}
+
 void GameScene::onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event)
 {
-	friendly[0]->die(true);
 	for (auto& touch : touches)
 	{
 		auto touchPoint = touch->getLocation();
-		if (!popUpLayer->isVisible())
+		if (!popUpLayer->isVisible() && !resultLayer->isVisible())
 		{
 			pauseButton->begin(touchPoint);
 
@@ -222,12 +322,17 @@ void GameScene::onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, coco
 				}
 			}
 		}
-		else
+		else if (popUpLayer->isVisible())
 		{
 			Vec2 touchPoint = popUpLayer->convertToNodeSpace(popUpFrame->convertToNodeSpace(touch->getLocation()));
 			menuButton->begin(touchPoint);
 			cancelButton->begin(touchPoint);
 			retryButton->begin(touchPoint);
+		}
+		else if (resultLayer->isVisible())
+		{
+			touchPoint = resultLayer->convertToNodeSpace(touch->getLocation());
+			confirmButton->begin(touchPoint);
 		}
 	}
 }
@@ -253,7 +358,7 @@ void GameScene::onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, coco
 	{
 		auto touchPoint = touch->getLocation();
 
-		if (!popUpLayer->isVisible())
+		if (!popUpLayer->isVisible() && !resultLayer->isVisible())
 		{
 			pauseButton->ended(touchPoint);
 
@@ -274,12 +379,20 @@ void GameScene::onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, coco
 				}
 			}
 		}
-		else
+		else if (popUpLayer->isVisible())
 		{
 			Vec2 touchPoint = popUpLayer->convertToNodeSpace(popUpFrame->convertToNodeSpace(touch->getLocation()));
 			menuButton->ended(touchPoint);
 			cancelButton->ended(touchPoint);
 			retryButton->ended(touchPoint);
+
+			touchPoint = resultLayer->convertToNodeSpace(touch->getLocation());
+			confirmButton->ended(touchPoint);
+		}
+		else if (resultLayer->isVisible())
+		{
+			touchPoint = resultLayer->convertToNodeSpace(touch->getLocation());
+			confirmButton->ended(touchPoint);
 		}
 	}
 }

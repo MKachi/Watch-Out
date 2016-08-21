@@ -22,9 +22,11 @@ namespace cocos2d
 		bool		_move;
 		bool		_die;
 		bool		_inLine;
+		float		_alpha;
 
 		bool init(Country country);
 		void countryImage(Country country);
+		void playDieAnimation();
 
 	protected:
 		Friendly();
@@ -48,6 +50,8 @@ namespace cocos2d
 		bool isDie() { return _die; }
 		void setInLine(const bool inLine);
 		bool isInLine() const { return _inLine; }
+
+		void fadeOut(float dt);
 
 	};
 }

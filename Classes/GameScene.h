@@ -17,6 +17,7 @@ public:
     
     CREATE_FUNC(GameScene);
 
+private:
 	cocos2d::Sprite* backGround[3];
 	bool backGroundAni[3];
 
@@ -40,11 +41,28 @@ public:
 	cocos2d::EnemySpawner* spawner;
 	cocos2d::SpawnPoint spawnPoint[6];
 
+	// result popUp font size 44
+	cocos2d::LayerColor* resultLayer;
+	cocos2d::Sprite* resultFrame;
+	cocos2d::Sprite* resultTitle;
+	cocos2d::Sprite* trophy;
+	cocos2d::LabelTTF* bestScore;
+	cocos2d::LabelTTF* score;
+	cocos2d::LabelTTF* obtain;
+	cocos2d::Button* confirmButton;
+	void setResultPopUp(bool active);
+	void downResultPopUp(float dt);
+
 	void onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
-	void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
 	void onTouchesMoved(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
+	void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event) override;
 
 	void update(float dt);
 	void scoreUp(float dt);
+
+	float delayCount = 0.0f;
+	void delayTimer(float dt);
+
+	std::string intToString(int value);
 
 };

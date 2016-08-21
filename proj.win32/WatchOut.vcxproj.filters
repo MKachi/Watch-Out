@@ -19,6 +19,9 @@
     <Filter Include="src\Managers">
       <UniqueIdentifier>{d36cf23a-23df-4fde-9b5b-5413e356233f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\TitleScene">
+      <UniqueIdentifier>{8740b4aa-c649-4d7c-9fba-2b65e042c391}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -49,6 +52,12 @@
       <Filter>src\Object</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Button.cpp">
+      <Filter>src\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TitleScene.cpp">
+      <Filter>src\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\OneTouchButton.cpp">
       <Filter>src\Object</Filter>
     </ClCompile>
   </ItemGroup>
@@ -84,6 +93,12 @@
       <Filter>src\Object</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Button.h">
+      <Filter>src\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TitleScene.h">
+      <Filter>src\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\OneTouchButton.h">
       <Filter>src\Object</Filter>
     </ClInclude>
   </ItemGroup>

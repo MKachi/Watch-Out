@@ -18,6 +18,8 @@ Enemy* Enemy::create()
 		result->autorelease();
 		return result;
 	}
+	CC_SAFE_DELETE(result);
+
 	return nullptr;
 }
 

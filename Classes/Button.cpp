@@ -15,6 +15,8 @@ Button* cocos2d::Button::create(const std::string& filename, Color3B color)
 	{
 		return result;
 	}
+	CC_SAFE_DELETE(result);
+
 	return nullptr;
 }
 
