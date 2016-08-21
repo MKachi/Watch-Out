@@ -70,3 +70,15 @@ int GameManager::getBestScore()
 	}
 	return UserDefault::getInstance()->getIntegerForKey("BestScore");
 }
+
+void GameManager::addMoney(int money)
+{
+	int myMoney = UserDefault::getInstance()->getIntegerForKey("Money");
+	UserDefault::getInstance()->setIntegerForKey("Money", myMoney + money);
+}
+
+void GameManager::minusMoney(int money)
+{
+	int myMoney = UserDefault::getInstance()->getIntegerForKey("Money");
+	UserDefault::getInstance()->setIntegerForKey("Money", myMoney - money);
+}

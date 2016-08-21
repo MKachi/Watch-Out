@@ -274,6 +274,8 @@ void GameScene::setResultPopUp(bool active)
 {
 	int gameScore = GameManager::getInstance()->getScore();
 	bestScore->setString(intToString(GameManager::getInstance()->getBestScore()));
+	GameManager::getInstance()->addMoney(gameScore);
+
 	score->setString(intToString(gameScore));
 	obtain->setString(intToString(gameScore));
 

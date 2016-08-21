@@ -76,6 +76,7 @@ bool TitleScene::init()
 			collection->click = [=]()
 			{
 				// Show Collection
+				CCLOG("Test\n");
 			};
 			collection->setPosition(popUpSize.width / 2, popUpSize.height / 2 + 70);
 			this->addChild(collection, true, 0);

@@ -51,6 +51,10 @@ namespace cocos2d
 		int getScore() { return _score; }
 		int getBestScore();
 
+		void addMoney(int money);
+		void minusMoney(int money);
+		int getMoney() { return UserDefault::getInstance()->getIntegerForKey("Money"); }
+
 		std::function<void()> endGame = [=]() {};
 	};
 }
