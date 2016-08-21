@@ -1,6 +1,7 @@
 ﻿#include "Floor.h"
 #include "Friendly.h"
 #include "UserRule.h"
+#include "GameManager.h"
 
 using namespace cocos2d;
 
@@ -43,7 +44,7 @@ void Floor::initArea(Rect dropArea, Node* layer)
 
 void Floor::dropCheck(Friendly* friendly)
 {
-	if (friendly->isMove() && !friendly->isInLine())
+	if (friendly->isVisible() && friendly->isMove() && !friendly->isInLine() && !friendly->isDie())
 	{
 		Rect dropArea = _dropArea->getBoundingBox();
 

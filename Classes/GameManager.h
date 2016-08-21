@@ -16,13 +16,13 @@ namespace cocos2d
 	{
 	private:
 		Difficulty		_difficulty;
-		int				_lifeCount = 3;
-		int				_catchCount = 0;
 		int				_score = 0;
 		float			_timeScale = 1.0f;
 		std::vector<std::string> _enemyImages;
 
 	public:
+		bool			_playerLife[3];
+		bool			_playerCatche[3];
 		static GameManager* getInstance();
 		static void destroy();
 
@@ -38,12 +38,6 @@ namespace cocos2d
 
 		void setTimeScale(float timeScale);
 		float getTimeScale() { return _timeScale; }
-
-		void setLifeCount(int count);
-		int getLifeCount() { return _lifeCount; }
-
-		void setCatchCount(int count);
-		int getCatchCount() { return _catchCount; }
 
 		void setScoreZero();
 		void upScore();

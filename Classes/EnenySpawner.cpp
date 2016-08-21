@@ -27,6 +27,7 @@ bool EnemySpawner::init(Node* layer)
 	{
 		_enemys[i] = Enemy::create();
 		_enemys[i]->setVisible(false);
+		_enemys[i]->setPosition(-999, -999);
 		layer->addChild(_enemys[i], 99);
 	}
 

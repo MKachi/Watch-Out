@@ -53,16 +53,6 @@ void GameManager::setTimeScale(float timeScale)
 	_timeScale = timeScale;
 }
 
-void GameManager::setLifeCount(int count)
-{
-	_lifeCount = count;
-}
-
-void GameManager::setCatchCount(int count)
-{
-	_catchCount = count;
-}
-
 void GameManager::setScoreZero()
 {
 	_score = 0;
@@ -70,7 +60,10 @@ void GameManager::setScoreZero()
 
 void GameManager::upScore()
 {
-	_score += (_lifeCount - _catchCount);
+	for (int i = 0; i < 3; ++i)
+	{
+		_score += (!_playerCatche[i] && _playerLife[i]) ? 1 : 0;
+	}
 }
 
 int GameManager::getBestScore()

@@ -63,6 +63,9 @@ bool GameScene::init()
 	float y = SCREEN_HEIGHT / 2 + 220;
 	for (int i = 0; i < 3; ++i)
 	{
+		GameManager::getInstance()->_playerCatche[i] = false;
+		GameManager::getInstance()->_playerLife[i] = true;
+
 		floor[i] = Floor::create("Temp_Platform.png", y + 105);
 		floor[i]->setOpacity(0.0f);
 		floor[i]->setPosition(SCREEN_WIDTH / 2, y);
@@ -73,6 +76,7 @@ bool GameScene::init()
 		friendly[i]->setPosition(SCREEN_WIDTH / 2, y + 105);
 		friendly[i]->setBackPosition(friendly[i]->getPosition());
 		friendly[i]->setOpacity(0.0f);
+		friendly[i]->setFriendlyID(i);
 		this->addChild(friendly[i], Depth::Friendly);
 
 		spawnPoint[i].position = Vec2(SCREEN_WIDTH / 2 + 475, y + 105);
@@ -211,6 +215,7 @@ bool GameScene::init()
 void GameScene::scoreUp(float dt)
 {
 	GameManager::getInstance()->upScore();
+	CCLOG("Score : %d\n", GameManager::getInstance()->getScore());
 }
 
 void GameScene::delayTimer(float dt)
@@ -319,14 +324,17 @@ void GameScene::onTouchesBegan(const std::vector<cocos2d::Touch*>& touches, coco
 
 			for (int i = 0; i < 3; ++i)
 			{
-				if (friendly[i]->getBoundingBox().containsPoint(touchPoint))
+				if (friendly[i]->isVisible())
 				{
-					friendly[i]->setMove(true);
-					friendly[i]->setInLine(false);
-					friendly[i]->setBackPosition(friendly[i]->getPosition());
-					friendly[i]->setTouchID(touch->getID());
-					friendly[i]->setPosition(touchPoint);
-					return;
+					if (friendly[i]->getBoundingBox().containsPoint(touchPoint))
+					{
+						friendly[i]->setMove(true);
+						friendly[i]->setInLine(false);
+						friendly[i]->setBackPosition(friendly[i]->getPosition());
+						friendly[i]->setTouchID(touch->getID());
+						friendly[i]->setPosition(touchPoint);
+						return;
+					}
 				}
 			}
 		}

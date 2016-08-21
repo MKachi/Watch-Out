@@ -91,15 +91,14 @@ void Friendly::setMove(const bool move)
 		_move = false;
 		return;
 	}
+
 	_move = move;
-	if (_move)
-	{
-		GameManager::getInstance()->setCatchCount(GameManager::getInstance()->getCatchCount() + 1);
-	}
-	else
-	{
-		GameManager::getInstance()->setCatchCount(GameManager::getInstance()->getCatchCount() - 1);
-	}
+	GameManager::getInstance()->_playerCatche[_friendlyID] = _move;
+}
+
+void Friendly::setFriendlyID(const int id)
+{
+	_friendlyID = id;
 }
 
 void Friendly::die(bool left)
@@ -107,11 +106,6 @@ void Friendly::die(bool left)
 	if (_die)
 	{
 		return;
-	}
-
-	if (_move)
-	{
-		GameManager::getInstance()->setCatchCount(GameManager::getInstance()->getCatchCount() - 1);
 	}
 
 	if (left)
@@ -127,8 +121,18 @@ void Friendly::die(bool left)
 		_object->playAnimation("deathToLeft");
 	}
 	_die = true;
-	GameManager::getInstance()->setLifeCount(GameManager::getInstance()->getLifeCount() - 1);
-	if (GameManager::getInstance()->getLifeCount() <= 0)
+
+	GameManager::getInstance()->_playerLife[_friendlyID] = false;
+	bool gameEnd = false;
+	for (int i = 0; i < 3; ++i)
+	{
+		if (GameManager::getInstance()->_playerLife[i])
+		{
+			gameEnd = true;
+		}
+	}
+
+	if (!gameEnd)
 	{
 		GameManager::getInstance()->endGame();
 	}
@@ -143,8 +147,9 @@ void Friendly::fadeOut(float dt)
 {
 	if (_alpha <= 0.0f)
 	{
-		this->setPosition(0, 0);
 		unschedule(schedule_selector(Friendly::fadeOut));
+		this->setPosition(9999, 9999);
+		this->setVisible(false);
 	}
 
 	std::vector<Node*> bones = _object->getBones();

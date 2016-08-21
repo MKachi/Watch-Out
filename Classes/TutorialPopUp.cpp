@@ -36,9 +36,10 @@ bool TutorialPopUp::init(Node* parent)
 	rightArrow = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
 	rightArrow->click = [=]()
 	{
-		index = clamp(index + 1, 0, (int)_tutorialImages.size() - 1);
-		if (index == (int)_tutorialImages.size() - 1)
+		index += 1;
+		if (index >= (int)_tutorialImages.size() - 1)
 		{
+			index = (int)_tutorialImages.size() - 1;
 			rightArrow->setVisible(false);
 		}
 		leftArrow->setVisible(true);
@@ -53,9 +54,10 @@ bool TutorialPopUp::init(Node* parent)
 	leftArrow->setFlippedX(true);
 	leftArrow->click = [=]()
 	{
-		index = clamp(index - 1, 0, (int)_tutorialImages.size() - 1);
-		if (index == 0)
+		index -= 1;
+		if (index <= 0)
 		{
+			index = 0;
 			leftArrow->setVisible(false);
 		}
 		rightArrow->setVisible(true);

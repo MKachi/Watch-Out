@@ -26,6 +26,7 @@ namespace cocos2d
 		bool		_die;
 		bool		_inLine;
 		float		_alpha;
+		int			_friendlyID;
 
 		bool init(Country country);
 		void countryImage(Country country);
@@ -48,6 +49,9 @@ namespace cocos2d
 
 		void setMove(const bool move);
 		bool isMove() const { return _move; }
+
+		void setFriendlyID(const int id);
+		int getFriendlyID() { return _friendlyID; }
 
 		void die(bool left);
 		bool isDie() { return _die; }
