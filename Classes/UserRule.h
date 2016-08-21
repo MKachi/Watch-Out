@@ -8,4 +8,4 @@ enum
 };
 
 #define GAME_TITLE "WatchOut"
-#define START_SCENE GameScene
+#define START_SCENE TitleScene

@@ -1,6 +1,6 @@
 ﻿#include "AppDelegate.h"
 #include "UserRule.h"
-#include "GameScene.h"
+#include "TitleScene.h"
 #include "GameManager.h"
 
 USING_NS_CC;

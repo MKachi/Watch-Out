@@ -1,5 +1,6 @@
 ﻿#include "GameScene.h"
 #include "SimpleAudioEngine.h"
+#include "TitleScene.h"
 #include <sstream>
 
 USING_NS_CC;
@@ -124,7 +125,8 @@ bool GameScene::init()
 	menuButton->click = [=]()
 	{
 		Director::getInstance()->resume();
-		// goto titleScene
+		Director::getInstance()->getEventDispatcher()->removeAllEventListeners();
+		Director::getInstance()->replaceScene(TransitionFade::create(2.0f, TitleScene::createScene(), Color3B::BLACK));
 	};
 	popUpFrame->addChild(menuButton);
 
@@ -142,7 +144,8 @@ bool GameScene::init()
 	retryButton->click = [=]()
 	{
 		Director::getInstance()->resume();
-		// restart game
+		Director::getInstance()->getEventDispatcher()->removeAllEventListeners();
+		Director::getInstance()->replaceScene(TransitionFade::create(2.0f, GameScene::createScene(), Color3B::BLACK));
 	};
 	popUpFrame->addChild(retryButton);
 

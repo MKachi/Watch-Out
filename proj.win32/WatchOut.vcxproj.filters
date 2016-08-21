@@ -57,7 +57,7 @@
     <ClCompile Include="..\Classes\TitleScene.cpp">
       <Filter>src\TitleScene</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\OneTouchButton.cpp">
+    <ClCompile Include="..\Classes\PopUp.cpp">
       <Filter>src\Object</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,7 +98,7 @@
     <ClInclude Include="..\Classes\TitleScene.h">
       <Filter>src\TitleScene</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\OneTouchButton.h">
+    <ClInclude Include="..\Classes\PopUp.h">
       <Filter>src\Object</Filter>
     </ClInclude>
   </ItemGroup>

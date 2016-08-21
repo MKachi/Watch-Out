@@ -29,6 +29,11 @@ bool Button::init(Color3B clickColor)
 
 void Button::begin(Vec2 touchPoint)
 {
+	if (!this->isVisible())
+	{
+		return;
+	}
+
 	if (this->getBoundingBox().containsPoint(touchPoint))
 	{
 		_down = true;
@@ -38,6 +43,11 @@ void Button::begin(Vec2 touchPoint)
 
 void Button::ended(Vec2 touchPoint)
 {
+	if (!this->isVisible())
+	{
+		return;
+	}
+
 	if (this->getBoundingBox().containsPoint(touchPoint))
 	{
 		if (_down)
