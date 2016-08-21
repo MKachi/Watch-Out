@@ -23,6 +23,7 @@ bool QuestPopUp::init(Node* parent)
 	tutorialButton->click = [=]()
 	{
 		// show tutorial
+		PopUpManager::getInstance()->openPopUp(TutorialPopUp::create(parent));
 	};
 	tutorialButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 370);
 	this->addChild(tutorialButton, true, 0);
