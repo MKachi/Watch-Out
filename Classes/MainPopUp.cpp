@@ -20,6 +20,7 @@ bool MainPopUp::init(Node* parent)
 	Button* teamSetting = Button::create("mainPopUp/TeamSetting.png", Color3B(125, 125, 125));
 	teamSetting->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		// Show TeamSetting
 		PopUpManager::getInstance()->openPopUp(TeamPopUp::create(parent));
 	};
@@ -30,6 +31,7 @@ bool MainPopUp::init(Node* parent)
 	Button* collection = Button::create("mainPopUp/Collection.png", Color3B(125, 125, 125));
 	collection->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		// Show Collection
 		CCLOG("Test\n");
 	};
@@ -40,6 +42,7 @@ bool MainPopUp::init(Node* parent)
 	Button* randomBox = Button::create("mainPopUp/RandomBox.png", Color3B(125, 125, 125));
 	randomBox->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		// Show RandomBox
 	};
 	randomBox->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 230);
@@ -49,6 +52,7 @@ bool MainPopUp::init(Node* parent)
 	Button* closeButton = Button::create("pause/Cancel.png", Color3B(125, 125, 125));
 	closeButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.ogg");
 		PopUpManager::getInstance()->closePopUp();
 	};
 	closeButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);

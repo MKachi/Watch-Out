@@ -36,6 +36,7 @@ bool TutorialPopUp::init(Node* parent)
 	rightArrow = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
 	rightArrow->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		index += 1;
 		if (index >= (int)_tutorialImages.size() - 1)
 		{
@@ -54,6 +55,7 @@ bool TutorialPopUp::init(Node* parent)
 	leftArrow->setFlippedX(true);
 	leftArrow->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		index -= 1;
 		if (index <= 0)
 		{
@@ -70,6 +72,7 @@ bool TutorialPopUp::init(Node* parent)
 	Button* closeButton = Button::create("pause/Cancel.png", Color3B(125, 125, 125));
 	closeButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.ogg");
 		PopUpManager::getInstance()->closePopUp();
 	};
 	closeButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);

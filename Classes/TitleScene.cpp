@@ -4,8 +4,10 @@
 #include "PopUpManager.h"
 #include "TeamPopUp.h"
 #include "QuestPopUp.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
+using namespace CocosDenshion;
 
 Scene* TitleScene::createScene()
 {
@@ -23,6 +25,30 @@ bool TitleScene::init()
 	{
 		return false;
 	}
+
+	if (!UserDefault::getInstance()->getBoolForKey("ApplicationInit"))
+	{
+		UserDefault::getInstance()->setBoolForKey("ApplicationInit", true);
+
+		UserDefault::getInstance()->setIntegerForKey("Friendly_0", Country::Korea);
+		UserDefault::getInstance()->setIntegerForKey("Friendly_1", Country::China);
+		UserDefault::getInstance()->setIntegerForKey("Friendly_2", Country::Japan);
+	}
+	SimpleAudioEngine::getInstance()->preloadBackgroundMusic("sound/Stage1.ogg");
+	SimpleAudioEngine::getInstance()->preloadBackgroundMusic("sound/Stage2.ogg");
+	SimpleAudioEngine::getInstance()->preloadBackgroundMusic("sound/Stage3.ogg");
+	SimpleAudioEngine::getInstance()->preloadBackgroundMusic("sound/resultWindow.ogg");
+
+	SimpleAudioEngine::getInstance()->preloadEffect("sound/boxOpen.ogg");
+	SimpleAudioEngine::getInstance()->preloadEffect("sound/button.ogg");
+	SimpleAudioEngine::getInstance()->preloadEffect("sound/cancelButton.ogg");
+	SimpleAudioEngine::getInstance()->preloadEffect("sound/carCrash.ogg");
+	SimpleAudioEngine::getInstance()->preloadEffect("sound/Error.ogg");
+	SimpleAudioEngine::getInstance()->preloadEffect("sound/menDie.ogg");
+	SimpleAudioEngine::getInstance()->preloadEffect("sound/womenDie.ogg");
+
+
+	SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage1.ogg");
 
 	backGround = Sprite::create("title/title_background.png");
 	backGround->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
@@ -44,6 +70,7 @@ bool TitleScene::init()
 	mainPopUpButton = Button::create("title/mainPopUpButton.png", Color3B(125, 125, 125));
 	mainPopUpButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		PopUpManager::getInstance()->openPopUp(MainPopUp::create(this)); // OpenPopUp
 	};
 	mainPopUpButton->setPosition(SCREEN_WIDTH / 2 - 250, SCREEN_HEIGHT / 2 - 410);
@@ -52,6 +79,7 @@ bool TitleScene::init()
 	helpPopUpButton = Button::create("title/helpButton.png", Color3B(125, 125, 125));
 	helpPopUpButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		PopUpManager::getInstance()->openPopUp(QuestPopUp::create(this));
 	};
 	helpPopUpButton->setPosition(SCREEN_WIDTH / 2 + 250, SCREEN_HEIGHT / 2 - 410);
@@ -60,6 +88,7 @@ bool TitleScene::init()
 	startButton = Button::create("title/playButton.png", Color3B(125, 125, 125));
 	startButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		Director::getInstance()->getEventDispatcher()->removeAllEventListeners();
 		Director::getInstance()->replaceScene(TransitionFade::create(2.0f, GameScene::createScene(), Color3B::BLACK));
 	};

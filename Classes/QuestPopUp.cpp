@@ -22,6 +22,7 @@ bool QuestPopUp::init(Node* parent)
 	Button* tutorialButton = Button::create("Question/TutorialButton.png", Color3B(125, 125, 125));
 	tutorialButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		// show tutorial
 		PopUpManager::getInstance()->openPopUp(TutorialPopUp::create(parent));
 	};
@@ -32,6 +33,7 @@ bool QuestPopUp::init(Node* parent)
 	Button* DevelopeButton = Button::create("Question/DeveloperButton.png", Color3B(125, 125, 125));
 	DevelopeButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		// DevelopeButton
 		PopUpManager::getInstance()->openPopUp(DevelopPopUp::create(parent));
 	};
@@ -42,6 +44,7 @@ bool QuestPopUp::init(Node* parent)
 	Button* RandomTutorial = Button::create("Question/RandomBoxButton.png", Color3B(125, 125, 125));
 	RandomTutorial->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		// RandomTutorial
 		PopUpManager::getInstance()->openPopUp(BoxTutorialPopUp::create(parent));
 	};
@@ -52,6 +55,7 @@ bool QuestPopUp::init(Node* parent)
 	Button* closeButton = Button::create("pause/Cancel.png", Color3B(125, 125, 125));
 	closeButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.ogg");
 		PopUpManager::getInstance()->closePopUp();
 	};
 	closeButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);

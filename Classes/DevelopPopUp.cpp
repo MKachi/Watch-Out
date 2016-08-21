@@ -23,6 +23,7 @@ bool DevelopPopUp::init(Node* parent)
 	Button* closeButton = Button::create("pause/Cancel.png", Color3B(125, 125, 125));
 	closeButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.ogg");
 		PopUpManager::getInstance()->closePopUp();
 	};
 	closeButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);

@@ -3,6 +3,9 @@
 #include "cocos2d.h"
 #include "Button.h"
 #include <forward_list>
+#include "SimpleAudioEngine.h"
+
+using namespace CocosDenshion;
 
 #define CREATE_POPUP(_POPUP_) \
 static _POPUP_* create(Node* parent) \

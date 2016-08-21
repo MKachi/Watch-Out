@@ -38,6 +38,7 @@ bool TeamPopUp::init(Node* parent)
 	Button* player1rightArrow = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
 	player1rightArrow->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		int index = (int)GameManager::getInstance()->getSelectCountrys(0);
 		index += 1;
 
@@ -56,6 +57,7 @@ bool TeamPopUp::init(Node* parent)
 	player1leftArrow->setFlippedX(true);
 	player1leftArrow->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		int index = (int)GameManager::getInstance()->getSelectCountrys(0);
 		index -= 1;
 		if (index < 0)
@@ -90,6 +92,7 @@ bool TeamPopUp::init(Node* parent)
 	Button* player2rightArrow = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
 	player2rightArrow->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		int index = (int)GameManager::getInstance()->getSelectCountrys(1);
 		index += 1;
 
@@ -108,6 +111,7 @@ bool TeamPopUp::init(Node* parent)
 	player2leftArrow->setFlippedX(true);
 	player2leftArrow->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		int index = (int)GameManager::getInstance()->getSelectCountrys(1);
 		index -= 1;
 		if (index < 0)
@@ -142,6 +146,7 @@ bool TeamPopUp::init(Node* parent)
 	Button* player3rightArrow = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
 	player3rightArrow->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		int index = (int)GameManager::getInstance()->getSelectCountrys(2);
 		index += 1;
 
@@ -160,6 +165,7 @@ bool TeamPopUp::init(Node* parent)
 	player3leftArrow->setFlippedX(true);
 	player3leftArrow->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		int index = (int)GameManager::getInstance()->getSelectCountrys(2);
 		index -= 1;
 		if (index < 0)
@@ -176,6 +182,7 @@ bool TeamPopUp::init(Node* parent)
 	Button* closeButton = Button::create("result/ConfirmButton.png", Color3B(125, 125, 125));
 	closeButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		PopUpManager::getInstance()->closePopUp();
 	};
 	closeButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);

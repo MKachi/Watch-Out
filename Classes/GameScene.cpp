@@ -2,8 +2,10 @@
 #include "SimpleAudioEngine.h"
 #include "TitleScene.h"
 #include <sstream>
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
+using namespace CocosDenshion;
 
 enum Depth
 {
@@ -35,6 +37,7 @@ bool GameScene::init()
 
 	GameManager::getInstance()->setScoreZero();
 	GameManager::getInstance()->setDifficulty(Difficulty::Easy);
+	SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage1.ogg");
 
 	std::string backGroundNames[]=
 	{
@@ -94,6 +97,7 @@ bool GameScene::init()
 	pauseButton->setPosition(SCREEN_WIDTH / 2 + 300, SCREEN_HEIGHT / 2 + 580);
 	pauseButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		Director::getInstance()->pause();
 		menuButton->resume();
 		cancelButton->resume();
@@ -108,6 +112,7 @@ bool GameScene::init()
 
 	GameManager::getInstance()->endGame = [=]()
 	{
+		SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
 		unschedule(schedule_selector(GameScene::update));
 		unschedule(schedule_selector(GameScene::scoreUp));
 
@@ -129,6 +134,7 @@ bool GameScene::init()
 	menuButton->setPosition(popUpFrame->getContentSize().width / 2, popUpFrame->getContentSize().height / 2);
 	menuButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		Director::getInstance()->resume();
 		Director::getInstance()->getEventDispatcher()->removeAllEventListeners();
 		Director::getInstance()->replaceScene(TransitionFade::create(2.0f, TitleScene::createScene(), Color3B::BLACK));
@@ -139,6 +145,7 @@ bool GameScene::init()
 	cancelButton->setPosition(popUpFrame->getContentSize().width / 2, popUpFrame->getContentSize().height / 2 - 200);
 	cancelButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.ogg");
 		Director::getInstance()->resume();
 		popUpLayer->setVisible(false);
 	};
@@ -148,6 +155,7 @@ bool GameScene::init()
 	retryButton->setPosition(popUpFrame->getContentSize().width / 2, popUpFrame->getContentSize().height / 2 + 200);
 	retryButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		Director::getInstance()->resume();
 		Director::getInstance()->getEventDispatcher()->removeAllEventListeners();
 		Director::getInstance()->replaceScene(TransitionFade::create(2.0f, GameScene::createScene(), Color3B::BLACK));
@@ -194,6 +202,7 @@ bool GameScene::init()
 	confirmButton->setPosition(Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 425));
 	confirmButton->click = [=]()
 	{
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		// goto Title
 		Director::getInstance()->getEventDispatcher()->removeAllEventListeners();
 		Director::getInstance()->replaceScene(TransitionFade::create(2.0f, TitleScene::createScene(), Color3B::BLACK));
@@ -220,6 +229,7 @@ void GameScene::scoreUp(float dt)
 
 void GameScene::delayTimer(float dt)
 {
+	SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/resultWindow.ogg");
 	this->unschedule(schedule_selector(GameScene::delayTimer));
 	auto action = EaseBackInOut::create(MoveTo::create(2.0f, Vec2(0.0f, 0.0f)));
 	resultLayer->runAction(action);
@@ -242,6 +252,7 @@ void GameScene::update(float dt)
 		{
 			if (backGround[(int)Difficulty::Normal]->getOpacity() <= 0.0f)
 			{
+				SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage3.ogg");
 				backGround[(int)Difficulty::Normal]->setVisible(false);
 			}
 			backGround[(int)Difficulty::Normal]->setOpacity(clampf(backGround[(int)Difficulty::Normal]->getOpacity() - 250.0f * dt, 0.0f, 255.0f));
@@ -255,6 +266,7 @@ void GameScene::update(float dt)
 		{
 			if (backGround[(int)Difficulty::Easy]->getOpacity() <= 0.0f)
 			{
+				SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage2.ogg");
 				backGround[(int)Difficulty::Easy]->setVisible(false);
 			}
 			backGround[(int)Difficulty::Easy]->setOpacity(clampf(backGround[(int)Difficulty::Easy]->getOpacity() - 250.0f * dt, 0.0f, 255.0f));

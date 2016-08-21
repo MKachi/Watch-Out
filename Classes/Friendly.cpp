@@ -1,7 +1,9 @@
 ﻿#include "Friendly.h"
 #include "GameManager.h"
+#include "SimpleAudioEngine.h"
 
 using namespace cocos2d;
+using namespace CocosDenshion;
 
 Friendly::Friendly()
 {	}
@@ -107,7 +109,7 @@ void Friendly::die(bool left)
 	{
 		return;
 	}
-
+	SimpleAudioEngine::getInstance()->playEffect("sound/carCrash.ogg");
 	if (left)
 	{
 		_alpha = 255.0f;
@@ -148,6 +150,19 @@ void Friendly::fadeOut(float dt)
 	if (_alpha <= 0.0f)
 	{
 		unschedule(schedule_selector(Friendly::fadeOut));
+		switch (GameManager::getInstance()->getSelectCountrys(_friendlyID))
+		{
+		case Korea:
+		case China:
+		case Vietnam:
+			SimpleAudioEngine::getInstance()->playEffect("sound/menDie.ogg");
+			break;
+		case Japan:
+		case Peru:
+		case Philippines:
+			SimpleAudioEngine::getInstance()->playEffect("sound/womenDie.ogg");
+			break;
+		}
 		this->setPosition(9999, 9999);
 		this->setVisible(false);
 	}
