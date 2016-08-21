@@ -45,7 +45,19 @@ void Friendly::countryImage(Country country)
 		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr.csb");
 		break;
 
-	case Country::Japen:
+	case Country::Japan:
+		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr.csb");
+		break;
+
+	case Country::Peru:
+		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr.csb");
+		break;
+
+	case Country::Philippines:
+		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr.csb");
+		break;
+
+	case Country::Vietnam:
 		_object = SkeletonObject::create("friendly/char-kr-pack.plist", "friendly/char-kr.csb");
 		break;
 	}

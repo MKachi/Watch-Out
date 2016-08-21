@@ -4,12 +4,12 @@
 
 namespace cocos2d
 {
-	class MainPopUp
+	class BoxTutorialPopUp
 		: public PopUp
 	{
 	public:
 		bool init(Node* parent);
-		CREATE_POPUP(MainPopUp);
+		CREATE_POPUP(BoxTutorialPopUp);
 
 	};
 }

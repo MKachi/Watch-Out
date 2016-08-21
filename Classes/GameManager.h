@@ -15,7 +15,6 @@ namespace cocos2d
 	class GameManager
 	{
 	private:
-		Country			_country[3];
 		Difficulty		_difficulty;
 		int				_lifeCount = 3;
 		int				_catchCount = 0;
@@ -35,7 +34,7 @@ namespace cocos2d
 		Difficulty getDifficulty() { return _difficulty; }
 
 		void setSelectCountrys(const int index, Country country);
-		Country getSelectCountrys(const int index) { return _country[index]; }
+		Country getSelectCountrys(const int index);
 
 		void setTimeScale(float timeScale);
 		float getTimeScale() { return _timeScale; }

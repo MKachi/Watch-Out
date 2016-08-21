@@ -35,10 +35,17 @@ void GameManager::setDifficulty(const Difficulty difficulty)
 void GameManager::setSelectCountrys(const int index, Country country)
 {
 	std::stringstream ss;
-	ss << index;
-	_country[index] = country;
+	ss << "Friendly_" << index;
 
-	UserDefault::getInstance()->setIntegerForKey(ss.str().c_str(), (int)country);
+	UserDefault::getInstance()->setIntegerForKey(ss.str().c_str(), country);
+}
+
+Country GameManager::getSelectCountrys(const int index)
+{
+	std::stringstream ss;
+	ss << "Friendly_" << index;
+
+	return (Country)UserDefault::getInstance()->getIntegerForKey(ss.str().c_str());
 }
 
 void GameManager::setTimeScale(float timeScale)

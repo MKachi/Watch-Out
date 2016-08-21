@@ -1,6 +1,7 @@
 #include "MainPopUp.h"
 #include "PopUpManager.h"
 #include "UserRule.h"
+#include "TeamPopUp.h"
 
 using namespace cocos2d;
 
@@ -12,10 +13,15 @@ bool MainPopUp::init(Node* parent)
 	}
 	parent->addChild(this);
 
+	Sprite* background = Sprite::create("PopUpFrame.png");
+	background->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+	this->addChild(background);
+
 	Button* teamSetting = Button::create("mainPopUp/TeamSetting.png", Color3B(125, 125, 125));
 	teamSetting->click = [=]()
 	{
 		// Show TeamSetting
+		PopUpManager::getInstance()->openPopUp(TeamPopUp::create(parent));
 	};
 	teamSetting->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 370);
 	this->addChild(teamSetting, true, 0);

@@ -2,6 +2,8 @@
 #include "GameScene.h"
 #include "MainPopUp.h"
 #include "PopUpManager.h"
+#include "TeamPopUp.h"
+#include "QuestPopUp.h"
 
 USING_NS_CC;
 
@@ -39,7 +41,6 @@ bool TitleScene::init()
 	this->addChild(titleText);
 	titleText->runAction(action);
 
-
 	mainPopUpButton = Button::create("title/mainPopUpButton.png", Color3B(125, 125, 125));
 	mainPopUpButton->click = [=]()
 	{
@@ -49,6 +50,10 @@ bool TitleScene::init()
 	this->addChild(mainPopUpButton);
 
 	helpPopUpButton = Button::create("title/helpButton.png", Color3B(125, 125, 125));
+	helpPopUpButton->click = [=]()
+	{
+		PopUpManager::getInstance()->openPopUp(QuestPopUp::create(this));
+	};
 	helpPopUpButton->setPosition(SCREEN_WIDTH / 2 + 250, SCREEN_HEIGHT / 2 - 410);
 	this->addChild(helpPopUpButton);
 

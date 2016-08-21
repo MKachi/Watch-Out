@@ -5,7 +5,7 @@
 #include <forward_list>
 
 #define CREATE_POPUP(_POPUP_) \
-static _POPUP_* _POPUP_::create(Node* parent) \
+static _POPUP_* create(Node* parent) \
 { \
 	_POPUP_* result = new (std::nothrow) _POPUP_(); \
 	if (result != nullptr && result->init(parent)) \

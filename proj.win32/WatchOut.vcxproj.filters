@@ -22,6 +22,12 @@
     <Filter Include="src\TitleScene">
       <UniqueIdentifier>{8740b4aa-c649-4d7c-9fba-2b65e042c391}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Object\PopUps">
+      <UniqueIdentifier>{3b230dde-0081-449b-80a1-122381568fa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Object\PopUps\Question">
+      <UniqueIdentifier>{3ab92d34-26bc-4982-9c49-2b61c5282b29}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -57,14 +63,29 @@
     <ClCompile Include="..\Classes\TitleScene.cpp">
       <Filter>src\TitleScene</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\PopUp.cpp">
-      <Filter>src\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\MainPopUp.cpp">
-      <Filter>src\Object</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\PopUpManager.cpp">
       <Filter>src\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainPopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TeamPopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DevelopPopUp.cpp">
+      <Filter>src\Object\PopUps\Question</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TutorialPopUp.cpp">
+      <Filter>src\Object\PopUps\Question</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BoxTutorialPopUp.cpp">
+      <Filter>src\Object\PopUps\Question</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\QuestPopUp.cpp">
+      <Filter>src\Object\PopUps\Question</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,17 +125,29 @@
     <ClInclude Include="..\Classes\TitleScene.h">
       <Filter>src\TitleScene</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\PopUp.h">
-      <Filter>src\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\MainPopUp.h">
-      <Filter>src\Object</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\PopUpManager.h">
       <Filter>src\Managers</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\MainPopUp.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PopUp.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
     <ClInclude Include="..\Classes\TeamPopUp.h">
-      <Filter>src\Object</Filter>
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DevelopPopUp.h">
+      <Filter>src\Object\PopUps\Question</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TutorialPopUp.h">
+      <Filter>src\Object\PopUps\Question</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BoxTutorialPopUp.h">
+      <Filter>src\Object\PopUps\Question</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\QuestPopUp.h">
+      <Filter>src\Object\PopUps\Question</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -145,7 +145,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\BoxTutorialPopUp.cpp" />
     <ClCompile Include="..\Classes\Button.cpp" />
+    <ClCompile Include="..\Classes\DevelopPopUp.cpp" />
     <ClCompile Include="..\Classes\Enemy.cpp" />
     <ClCompile Include="..\Classes\EnenySpawner.cpp" />
     <ClCompile Include="..\Classes\Floor.cpp" />
@@ -155,13 +157,18 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\MainPopUp.cpp" />
     <ClCompile Include="..\Classes\PopUp.cpp" />
     <ClCompile Include="..\Classes\PopUpManager.cpp" />
+    <ClCompile Include="..\Classes\QuestPopUp.cpp" />
     <ClCompile Include="..\Classes\SkeletonObject.cpp" />
+    <ClCompile Include="..\Classes\TeamPopUp.cpp" />
     <ClCompile Include="..\Classes\TitleScene.cpp" />
+    <ClCompile Include="..\Classes\TutorialPopUp.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\BoxTutorialPopUp.h" />
     <ClInclude Include="..\Classes\Button.h" />
+    <ClInclude Include="..\Classes\DevelopPopUp.h" />
     <ClInclude Include="..\Classes\Enemy.h" />
     <ClInclude Include="..\Classes\EnenySpawner.h" />
     <ClInclude Include="..\Classes\Floor.h" />
@@ -171,9 +178,11 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\MainPopUp.h" />
     <ClInclude Include="..\Classes\PopUp.h" />
     <ClInclude Include="..\Classes\PopUpManager.h" />
+    <ClInclude Include="..\Classes\QuestPopUp.h" />
     <ClInclude Include="..\Classes\SkeletonObject.h" />
     <ClInclude Include="..\Classes\TeamPopUp.h" />
     <ClInclude Include="..\Classes\TitleScene.h" />
+    <ClInclude Include="..\Classes\TutorialPopUp.h" />
     <ClInclude Include="..\Classes\UserRule.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

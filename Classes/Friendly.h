@@ -4,15 +4,14 @@
 
 namespace cocos2d
 {
-	enum class Country
+	enum Country
 	{
 		Korea,
 		China,
-		Japen,
+		Japan,
 		Peru,
 		Philippines,
 		Vietnam,
-		CountryEnd,
 	};
 
 	class Friendly
