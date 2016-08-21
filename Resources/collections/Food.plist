@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>PekingDuck</string>
+		<key>country</key>
+		<string>China</string>
+		<key>description</key>
+		<string>A famous duck dish that has been prepared since the imperial era.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Peking_duck</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Anticuchos</string>
+		<key>country</key>
+		<string>Peru</string>
+		<key>description</key>
+		<string>Dish made with beef heart. </string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Anticucho</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Kimchi</string>
+		<key>country</key>
+		<string>South Korea</string>
+		<key>description</key>
+		<string>A traditional fermented Korean side dish made of vegetables with a variety of seasonings.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Kimchi</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sushi</string>
+		<key>country</key>
+		<string>Japan</string>
+		<key>description</key>
+		<string>Consisting of cooked vinegared rice combined with other ingredients such as raw seafood.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Sushi</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bunbo</string>
+		<key>country</key>
+		<string>Vietnam</string>
+		<key>description</key>
+		<string>a popular soup containing rice vermicelli (bún) and beef (bò)</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Bún_bò_Huế</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tapas</string>
+		<key>country</key>
+		<string>Philippines</string>
+		<key>description</key>
+		<string>Dried or cured beef, mutton, venison or horse meat.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Tapas</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>KaengPhet</string>
+		<key>country</key>
+		<string>Thailand</string>
+		<key>description</key>
+		<string>A coconut curry made with copious amounts of dried red chilies in the curry paste.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Red_curry</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>NasiLemak</string>
+		<key>country</key>
+		<string>Malaysia</string>
+		<key>description</key>
+		<string>Rice steamed with coconut milk and pandan leaves. </string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Nasi_lemak</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>TumYum</string>
+		<key>country</key>
+		<string>Thailand</string>
+		<key>description</key>
+		<string>Soup with distinct hot and sour flavours, with fragrant spices and herbs generously used in the broth. </string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Tom_yum</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Adobo</string>
+		<key>country</key>
+		<string>Philippines</string>
+		<key>description</key>
+		<string>Cuisine that involves meat, seafood, or vegetables marinated in vinegar, soy sauce, and garlic</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Adobo</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pho</string>
+		<key>country</key>
+		<string>Vietnam</string>
+		<key>description</key>
+		<string>Noodle soup consisting of broth, linguine-shaped rice.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/PHO
+</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bulgogi</string>
+		<key>country</key>
+		<string>South Korea</string>
+		<key>description</key>
+		<string>Dish that usually consists of grilled marinated beef. </string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Bulgogi</string>
+	</dict>
+</array>
+</plist>

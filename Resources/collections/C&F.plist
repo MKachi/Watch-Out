@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>IntiRaymi</string>
+		<key>country</key>
+		<string>Peru</string>
+		<key>description</key>
+		<string>“Festival of the Sun”, re-enactment of the Inca winter-solstice festival</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Inti_Raymi</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dano</string>
+		<key>country</key>
+		<string>South Korea</string>
+		<key>description</key>
+		<string>Dano is a Korean traditional holiday that falls on the 5th day of the fifth month of the lunar Korean calendar.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Dano_(Korean_festival)</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Panagbenga</string>
+		<key>country</key>
+		<string>Philippines</string>
+		<key>description</key>
+		<string>Panagbenga a month-long annual flower festival occurring in Baguio.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Panagbenga_Festival</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>NebutaMatsuri</string>
+		<key>country</key>
+		<string>Japan</string>
+		<key>description</key>
+		<string>Nebuta Matsuri a summer festival that takes place in Aomori.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Aomori_Nebuta_Matsuri</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Songkran</string>
+		<key>country</key>
+		<string>Thailand</string>
+		<key>description</key>
+		<string>The Thai New Year Festival coincides with the rising of Aries on the astrological chart.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Songkran_(Thailand)</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>FiestasPatrias</string>
+		<key>country</key>
+		<string>Peru</string>
+		<key>description</key>
+		<string>Celebrations of Peru's independence from the Spanish Empire.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Fiestas_Patrias_(Peru)</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Kimono</string>
+		<key>country</key>
+		<string>Japan</string>
+		<key>description</key>
+		<string>T-shaped, straight-lined robes worn so that the hem falls to the ankle, with attached collars and long, wide sleeves.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Kimono</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>PhaNung</string>
+		<key>country</key>
+		<string>Thailand</string>
+		<key>description</key>
+		<string>A long, rectangular cloth worn around the lower body.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Traditional_Thai_clothing</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pollera</string>
+		<key>country</key>
+		<string>Peru</string>
+		<key>description</key>
+		<string> A big one-piece skirt used mostly in traditional festivities and folklore.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Pollera</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hanbok</string>
+		<key>country</key>
+		<string>South Korea</string>
+		<key>description</key>
+		<string>It is characterized by vibrant colors and simple lines without pockets.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Hanbok</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hanfu</string>
+		<key>country</key>
+		<string>China</string>
+		<key>description</key>
+		<string>Clothes containing garment elements that are arranged in distinctive and sometimes specific ways.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Hanfu</string>
+	</dict>
+</array>
+</plist>

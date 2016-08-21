@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Great Wall</string>
+		<key>country</key>
+		<string>China</string>
+		<key>description</key>
+		<string>Consists of numerous walls and fortifications as a means of keeping out the Mongol hordes invading the country. </string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Great_Wall_of_China</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Machu Picchu</string>
+		<key>country</key>
+		<string>Peru</string>
+		<key>description</key>
+		<string>Ruined city lies on top of a mountain, a symbol of Inca Civilization.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Machu_Picchu</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gyeongbokgung</string>
+		<key>country</key>
+		<string>South Korea</string>
+		<key>description</key>
+		<string>The main royal palace of the Joseon dynasty. </string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Gyeongbokgung </string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ayutthaya</string>
+		<key>country</key>
+		<string>Thailand</string>
+		<key>description</key>
+		<string>Capital of the Kingdom of Siam, and a prosperous international trading port.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Ayutthaya_Kingdom</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Aguinaldo Shrine</string>
+		<key>country</key>
+		<string>Philippines</string>
+		<key>description</key>
+		<string>The national shrine located in Kawit, Cavite in the Republic of the Philippines.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Aguinaldo_Shrine </string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>A Famosa</string>
+		<key>country</key>
+		<string>Malaysia</string>
+		<key>description</key>
+		<string>Portuguese fortress,  among the oldest surviving European architectural remains in south east Asia.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/A_Famosa</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Linh Sơn Pagoda</string>
+		<key>country</key>
+		<string>Vietnam</string>
+		<key>description</key>
+		<string>The Buddhist temple built in a classical Asian style of architecture, and is of a simple layout and model.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Linh_Sơn_Pagoda</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Summer Palace</string>
+		<key>country</key>
+		<string>China</string>
+		<key>description</key>
+		<string>Summer Palace is a vast ensemble of lakes, gardens and palaces in Beijing.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Summer_Palace</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Golden Pavilion</string>
+		<key>country</key>
+		<string>Japan</string>
+		<key>description</key>
+		<string>Golden Pavilion is a Buddhist temple in Kyoto, looks like made by gold.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Temple_of_the_Golden_Pavilion_(disambiguation)</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheomseongdae</string>
+		<key>country</key>
+		<string>South Korea</string>
+		<key>description</key>
+		<string>Cheomseongdae is an astronomical observatory in Gyeongju.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Cheomseongdae</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Forbidden City</string>
+		<key>country</key>
+		<string>China</string>
+		<key>description</key>
+		<string>The Chinese imperial palace from the Ming dynasty to the end of the Qing dynasty.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Forbidden_City</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Terracotta Army</string>
+		<key>country</key>
+		<string>China</string>
+		<key>description</key>
+		<string>Terracotta Armyis a collection of terracotta sculptures depicting the armies of Qin Shi Huang, the first Emperor of China.</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Terracotta_Army</string>
+	</dict>
+</array>
+</plist>
