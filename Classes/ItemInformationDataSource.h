@@ -10,6 +10,8 @@
 #define ItemInformationDataSource_hpp
 #include "ItemInformationCell.h"
 #include <stdio.h>
+#include <algorithm>
+
 namespace cocos2d{
 class ItemInformationDataSource{
     private:
@@ -20,6 +22,7 @@ class ItemInformationDataSource{
         ItemInformationDataSource();
         ItemInformationDataSource(std::string setName);
         ~ItemInformationDataSource();
+		std::vector<ItemInformationCell*>& getVector() { return info; }
         std::string getName(int atIndex){ return (info.at(atIndex))->name; }
         std::string getCountry(int atIndex){ return (info.at(atIndex))->country; }
         std::string getDescription(int atIndex){ return (info.at(atIndex))->description; }

@@ -47,7 +47,6 @@ bool TitleScene::init()
 	SimpleAudioEngine::getInstance()->preloadEffect("sound/menDie.ogg");
 	SimpleAudioEngine::getInstance()->preloadEffect("sound/womenDie.ogg");
 
-
 	SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage1.ogg", true);
 
 	backGround = Sprite::create("title/title_background.png");

@@ -10,6 +10,10 @@
 #define ItemInformationCell_hpp
 
 #include <stdio.h>
+#include <string>
+#include <vector>
+#include "cocos2d.h"
+
 namespace cocos2d {
     using std::string;
     struct ItemInformationCell{

@@ -14,3 +14,6 @@ cocos2d::ItemSet::ItemSet(){
     initDataFromFile("Landmark");
     print();
 }
+
+cocos2d::ItemSet::~ItemSet()
+{	}

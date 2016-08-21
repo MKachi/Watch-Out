@@ -8,6 +8,8 @@
 
 #include "ItemInformationCell.h"
 
+using namespace cocos2d;
+
 cocos2d::ItemInformationCell::ItemInformationCell(ValueMap& v){
     name = v["name"].asString();
     country = v["country"].asString();

@@ -87,6 +87,21 @@
     <ClCompile Include="..\Classes\QuestPopUp.cpp">
       <Filter>src\Object\PopUps\Question</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\ItemSet.cpp">
+      <Filter>src\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ItemInformationCell.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ItemInformationDataSource.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\RandomBoxPopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BoxResultPopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -148,6 +163,21 @@
     </ClInclude>
     <ClInclude Include="..\Classes\QuestPopUp.h">
       <Filter>src\Object\PopUps\Question</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ItemSet.h">
+      <Filter>src\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ItemInformationCell.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ItemInformationDataSource.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\RandomBoxPopUp.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BoxResultPopUp.h">
+      <Filter>src\Object\PopUps</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

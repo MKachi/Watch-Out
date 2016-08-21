@@ -2,6 +2,7 @@
 #include "PopUpManager.h"
 #include "UserRule.h"
 #include "TeamPopUp.h"
+#include "RandomBoxPopUp.h"
 
 using namespace cocos2d;
 
@@ -43,6 +44,7 @@ bool MainPopUp::init(Node* parent)
 	randomBox->click = [=]()
 	{
 		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
+		PopUpManager::getInstance()->openPopUp(RandomBoxPopUp::create(parent));
 		// Show RandomBox
 	};
 	randomBox->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 230);
