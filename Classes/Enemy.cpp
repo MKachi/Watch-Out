@@ -13,7 +13,7 @@ Enemy::~Enemy()
 Enemy* Enemy::create()
 {
 	Enemy* result = new (std::nothrow) Enemy();
-	if (result != nullptr && result->initWithFile("Temp_Car.png") && result->init())
+	if (result != nullptr && result->initWithFile("Car1.png") && result->init())
 	{
 		result->autorelease();
 		return result;

@@ -2,6 +2,7 @@
 #include "UserRule.h"
 #include "TitleScene.h"
 #include "GameManager.h"
+#include "PopUpManager.h"
 
 USING_NS_CC;
 
@@ -11,6 +12,7 @@ AppDelegate::AppDelegate()
 AppDelegate::~AppDelegate()
 {	
 	GameManager::destroy();
+	PopUpManager::destroy();
 }
 
 void AppDelegate::initGLContextAttrs()

@@ -63,8 +63,6 @@ bool GameScene::init()
 	float y = SCREEN_HEIGHT / 2 + 220;
 	for (int i = 0; i < 3; ++i)
 	{
-		GameManager::getInstance()->setSelectCountrys(i, Country::Korea);
-
 		floor[i] = Floor::create("Temp_Platform.png", y + 105);
 		floor[i]->setOpacity(0.0f);
 		floor[i]->setPosition(SCREEN_WIDTH / 2, y);
@@ -100,7 +98,10 @@ bool GameScene::init()
 	};
 	this->addChild(pauseButton, Depth::PauseButton);
 
-	GameManager::getInstance()->pushEnemyImage("Temp_Car.png");
+	GameManager::getInstance()->pushEnemyImage("Car1.png");
+	GameManager::getInstance()->pushEnemyImage("Car2.png");
+	GameManager::getInstance()->pushEnemyImage("Car3.png");
+
 	GameManager::getInstance()->endGame = [=]()
 	{
 		unschedule(schedule_selector(GameScene::update));
@@ -190,6 +191,8 @@ bool GameScene::init()
 	confirmButton->click = [=]()
 	{
 		// goto Title
+		Director::getInstance()->getEventDispatcher()->removeAllEventListeners();
+		Director::getInstance()->replaceScene(TransitionFade::create(2.0f, TitleScene::createScene(), Color3B::BLACK));
 	};
 	resultLayer->addChild(confirmButton);
 
