@@ -15,6 +15,7 @@ enum Depth
 	Friendly,
 	Enemy,
 	PauseButton,
+	Score,
 	PausePopUp,
 };
 
@@ -37,7 +38,7 @@ bool GameScene::init()
 
 	GameManager::getInstance()->setScoreZero();
 	GameManager::getInstance()->setDifficulty(Difficulty::Easy);
-	SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage1.ogg");
+	SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage1.ogg", true);
 
 	std::string backGroundNames[]=
 	{
@@ -209,6 +210,12 @@ bool GameScene::init()
 	};
 	resultLayer->addChild(confirmButton);
 
+	scoreDisplay = LabelBMFont::create("0", "fonts/font.fnt");
+	scoreDisplay->setAnchorPoint(Vec2(0.0f, 0.5f));
+	scoreDisplay->setPosition(30.0f, SCREEN_HEIGHT / 2 + 560);
+	scoreDisplay->setScale(0.7f);
+	this->addChild(scoreDisplay, Depth::Score);
+
 	auto listener = EventListenerTouchAllAtOnce::create();
 	listener->onTouchesBegan = CC_CALLBACK_2(GameScene::onTouchesBegan, this);
 	listener->onTouchesMoved = CC_CALLBACK_2(GameScene::onTouchesMoved, this);
@@ -224,12 +231,15 @@ bool GameScene::init()
 void GameScene::scoreUp(float dt)
 {
 	GameManager::getInstance()->upScore();
-	CCLOG("Score : %d\n", GameManager::getInstance()->getScore());
+
+	std::stringstream ss;
+	ss << GameManager::getInstance()->getScore();
+	scoreDisplay->setString(ss.str());
 }
 
 void GameScene::delayTimer(float dt)
 {
-	SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/resultWindow.ogg");
+	SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/resultWindow.ogg", true);
 	this->unschedule(schedule_selector(GameScene::delayTimer));
 	auto action = EaseBackInOut::create(MoveTo::create(2.0f, Vec2(0.0f, 0.0f)));
 	resultLayer->runAction(action);
@@ -245,14 +255,14 @@ std::string GameScene::intToString(int value)
 void GameScene::update(float dt)
 {
 	int score = GameManager::getInstance()->getScore();
-	if (score >= 150)
+	if (score >= 125)
 	{
 		GameManager::getInstance()->setDifficulty(Difficulty::Hard);
-		if (backGround[(int)Difficulty::Normal]->getOpacity() >= 255.0f && backGround[(int)Difficulty::Normal]->isVisible())
+		if (backGround[(int)Difficulty::Normal]->getOpacity() >= 0.0f && backGround[(int)Difficulty::Normal]->isVisible())
 		{
 			if (backGround[(int)Difficulty::Normal]->getOpacity() <= 0.0f)
 			{
-				SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage3.ogg");
+				SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage3.ogg", true);
 				backGround[(int)Difficulty::Normal]->setVisible(false);
 			}
 			backGround[(int)Difficulty::Normal]->setOpacity(clampf(backGround[(int)Difficulty::Normal]->getOpacity() - 250.0f * dt, 0.0f, 255.0f));
@@ -266,7 +276,7 @@ void GameScene::update(float dt)
 		{
 			if (backGround[(int)Difficulty::Easy]->getOpacity() <= 0.0f)
 			{
-				SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage2.ogg");
+				SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/Stage2.ogg", true);
 				backGround[(int)Difficulty::Easy]->setVisible(false);
 			}
 			backGround[(int)Difficulty::Easy]->setOpacity(clampf(backGround[(int)Difficulty::Easy]->getOpacity() - 250.0f * dt, 0.0f, 255.0f));
@@ -299,15 +309,15 @@ void GameScene::setResultPopUp(bool active)
 	score->setString(intToString(gameScore));
 	obtain->setString(intToString(gameScore));
 
-	if (gameScore >= 30)
+	if (GameManager::getInstance()->getDifficulty() == Difficulty::Hard)
 	{
 		trophy->setTexture("result/Gold.png");
 	}
-	else if (gameScore >= 20)
+	else if (GameManager::getInstance()->getDifficulty() == Difficulty::Normal)
 	{
 		trophy->setTexture("result/Silver.png");
 	}
-	else if (gameScore >= 10)
+	else if (GameManager::getInstance()->getDifficulty() == Difficulty::Easy)
 	{
 		trophy->setTexture("result/Bronze.png");
 	}

@@ -35,6 +35,8 @@ private:
 	cocos2d::Button* cancelButton;
 	cocos2d::Button* retryButton;
 
+	cocos2d::LabelBMFont* scoreDisplay;
+
 	cocos2d::Floor* floor[3];
 	cocos2d::Friendly* friendly[3];
 
