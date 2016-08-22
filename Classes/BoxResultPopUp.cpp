@@ -13,16 +13,16 @@ bool BoxResultPopUp::init(Node* parent)
 	}
 	parent->addChild(this);
 
-	int index = RandomIndex();
 
 	_itemSet = new ItemSet();
+	int index = RandomIndex(_itemSet->getVector().size() - 1);
 	std::string itemName = _itemSet->getVector()[index]->name;
 
 	if (UserDefault::getInstance()->getBoolForKey(itemName.c_str()))
 	{
 		while (true)
 		{
-			index = RandomIndex();
+			index = RandomIndex(_itemSet->getVector().size() - 1);
 			itemName = _itemSet->getVector()[index]->name;
 			if (!UserDefault::getInstance()->getBoolForKey(itemName.c_str()))
 			{
@@ -64,11 +64,11 @@ bool BoxResultPopUp::init(Node* parent)
 	return true;
 }
 
-int BoxResultPopUp::RandomIndex()
+int BoxResultPopUp::RandomIndex(int size)
 {
 	std::random_device seed;
 	std::mt19937 device(seed());
-	std::uniform_int_distribution<int> dist(0, _itemSet->getVector().size() - 1);
+	std::uniform_int_distribution<int> dist(0, size);
 	return dist(device);
 	return 0;
 }

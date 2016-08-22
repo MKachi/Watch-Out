@@ -43,15 +43,15 @@ bool RandomBoxPopUp::init(Node* parent)
 	Button* buyButton = Button::create("random/BuyButton.png", Color3B(125, 125, 125));
 	buyButton->click = [=]()
 	{
-		int count = UserDefault::getInstance()->getIntegerForKey("ItemCount");
-		int money = GameManager::getInstance()->getMoney();
-		if (money < 100 || count >= itemSet->getVector().size())
-		{
-			SimpleAudioEngine::getInstance()->playEffect("sound/Error.ogg");
-			return;
-		}
-		SimpleAudioEngine::getInstance()->playEffect("sound/boxOpen.ogg");
-		GameManager::getInstance()->minusMoney(100);
+		//int count = UserDefault::getInstance()->getIntegerForKey("ItemCount");
+		//int money = GameManager::getInstance()->getMoney();
+		//if (money < 100 || count >= itemSet->getVector().size())
+		//{
+		//	SimpleAudioEngine::getInstance()->playEffect("sound/Error.ogg");
+		//	return;
+		//}
+		//SimpleAudioEngine::getInstance()->playEffect("sound/boxOpen.ogg");
+		//GameManager::getInstance()->minusMoney(100);
 
 		std::stringstream ss;
 		ss << GameManager::getInstance()->getMoney();
