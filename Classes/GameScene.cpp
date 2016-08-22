@@ -200,7 +200,7 @@ bool GameScene::init()
 	resultLayer->addChild(obtain);
 
 	Sprite* icon = Sprite::create("random/moneyIcon.png");
-	icon->setPosition(SCREEN_WIDTH / 2 + 180, SCREEN_HEIGHT / 2 - 235);
+	icon->setPosition(SCREEN_WIDTH / 2 + 160, SCREEN_HEIGHT / 2 - 235);
 	resultLayer->addChild(icon);
 
 	confirmButton = Button::create("result/ConfirmButton.png", Color3B(125, 125, 125));
@@ -259,7 +259,7 @@ std::string GameScene::intToString(int value)
 void GameScene::update(float dt)
 {
 	int score = GameManager::getInstance()->getScore();
-	if (score >= 125)
+	if (score >= 100)
 	{
 		GameManager::getInstance()->setDifficulty(Difficulty::Hard);
 		if (backGround[(int)Difficulty::Normal]->getOpacity() >= 0.0f && backGround[(int)Difficulty::Normal]->isVisible())

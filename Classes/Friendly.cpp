@@ -114,12 +114,12 @@ void Friendly::die(bool left)
 	{
 	case Korea:
 	case China:
-	case Vietnam:
+	case Peru:
 		SimpleAudioEngine::getInstance()->playEffect("sound/menDie.ogg");
 		break;
 	case Japan:
-	case Peru:
 	case Philippines:
+	case Vietnam:
 		SimpleAudioEngine::getInstance()->playEffect("sound/womenDie.ogg");
 		break;
 	}
