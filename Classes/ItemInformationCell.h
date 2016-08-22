@@ -32,6 +32,9 @@ namespace cocos2d {
          CCLOG("a:%s\nb:%s\nans:%d\n",name.c_str(),b->name.c_str(),(int)(name < b->name));
          return name < b->name;
          }*/
+        void checkUnlock(){
+            unlocked = UserDefault::getInstance()->getBoolForKey(name.c_str());
+        }
         static bool compare (const ItemInformationCell* a, const ItemInformationCell* b );
     };
     

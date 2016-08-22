@@ -28,6 +28,13 @@ class ItemInformationDataSource{
         std::string getUrl(int atIndex){ return (info.at(atIndex))->url; }
         std::string getPictureDir(int atIndex){ return "collections/" + info.at(atIndex)->setdir + "/" + getName(atIndex) + ".png"; }
         std::string getNamePictureDir(int atIndex){return "collections/" + info.at(atIndex)->setdir + "/" + getName(atIndex) + "_Name.png";}
+        bool isUnlocked(int atIndex){ return info.at(atIndex)->unlocked; }
+        void update(){
+            for(int i = 0; i < size(); i ++){
+                info.at(i)->checkUnlock();
+                sort();
+            }
+        }
         size_t size(){ return info.size(); }
         void sort(){
             std::sort(info.begin(),info.end(),ItemInformationCell::compare);

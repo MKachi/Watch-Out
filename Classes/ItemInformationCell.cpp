@@ -15,7 +15,7 @@ cocos2d::ItemInformationCell::ItemInformationCell(ValueMap& v,string _setdir){
     country = v["country"].asString();
     description = v["description"].asString();
     url = v["url"].asString();
-    unlocked = true;
+    unlocked = UserDefault::getInstance()->getBoolForKey(name.c_str());
     setdir = _setdir;
     CCLOG("%s\n",name.c_str());
 }

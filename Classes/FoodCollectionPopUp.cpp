@@ -79,8 +79,10 @@ bool FoodCollectionPopUp::init(Node* parent)
     pictureClickArea->setOpacity(0.0f);
     pictureClickArea->click = [=]()
     {
-        CCLOG("clicked");
-        if(!isDetail){
+        if(!data->isUnlocked(index)){
+            return;
+        }
+        else if(!isDetail){
             picture->setColor(Color3B(125,125,125));
             descriptionLabel->setOpacity(255.0f);
         }
@@ -108,25 +110,42 @@ bool FoodCollectionPopUp::init(Node* parent)
     this->addChild(closeButton, true, 0);
     this->registeButton(closeButton);
     
-    
+    update();
     
     
     return true;
 }
 void cocos2d::FoodCollectionPopUp::update(){
-    string tmpString = Value(index+1).asString() + "/" + Value((int)data->size()).asString();
-    positionLabel->setString(tmpString);
-    
-    picture->setTexture(data->getPictureDir(index));
-    
-    namePicture->setTexture(data->getNamePictureDir(index));
-    
-    descriptionLabel->setString(data->getDescription(index));
-    
-    picture->setColor(Color3B(255,255,255));
-    
-    descriptionLabel->setOpacity(0.0f);
-    
-    isDetail = false;
-    
+    if(data->isUnlocked(index)){
+        string tmpString = Value(index+1).asString() + "/" + Value((int)data->size()).asString();
+        positionLabel->setString(tmpString);
+        
+        picture->setTexture(data->getPictureDir(index));
+        
+        namePicture->setTexture(data->getNamePictureDir(index));
+        
+        descriptionLabel->setString(data->getDescription(index));
+        
+        picture->setColor(Color3B(255,255,255));
+        
+        descriptionLabel->setOpacity(0.0f);
+        
+        isDetail = false;
+    }
+    else{
+        string tmpString = Value(index+1).asString() + "/" + Value((int)data->size()).asString();
+        positionLabel->setString(tmpString);
+        
+        picture->setTexture("collections/Unknown.png");
+        
+        namePicture->setTexture("collections/Unknown_Name.png");
+        
+        descriptionLabel->setString("");
+        
+        picture->setColor(Color3B(255,255,255));
+        
+        descriptionLabel->setOpacity(0.0f);
+        
+        isDetail = false;
+    }
 }
