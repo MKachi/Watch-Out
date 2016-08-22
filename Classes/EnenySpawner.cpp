@@ -61,7 +61,7 @@ float EnemySpawner::delayRandom()
 		return random_float(4.0f, 6.0f);
 
 	case Difficulty::Normal:
-		return random_float(3.0f, 5.0f);
+		return random_float(3.0f, 4.0f);
 
 	case Difficulty::Hard:
 		return random_float(1.0f, 2.0f);
