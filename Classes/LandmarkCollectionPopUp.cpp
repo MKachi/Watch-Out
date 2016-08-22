@@ -34,7 +34,7 @@ bool LandmarkCollectionPopUp::init(Node* parent)
     string tmpString = Value(index+1).asString() + "/" + Value((int)data->size()).asString();
     
     
-    positionLabel = LabelTTF::create(tmpString, "font/verdana.ttf", 63.0f);
+    positionLabel = LabelTTF::create(tmpString, "fonts/verdana.ttf", 63.0f);
     positionLabel->setPosition(SCREEN_WIDTH / 2,SCREEN_HEIGHT/2 + 480);
     this->addChild(positionLabel,true,0);
     

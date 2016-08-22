@@ -29,7 +29,7 @@ bool RandomBoxPopUp::init(Node* parent)
 	std::stringstream ss;
 	ss << GameManager::getInstance()->getMoney();
 
-	_money = LabelTTF::create(ss.str(), "font/verdana.ttf", 44.0f);
+	_money = LabelTTF::create(ss.str(), "fonts/verdana.ttf", 44.0f);
 	_money->setPosition(Vec2(SCREEN_WIDTH / 2 + 20, SCREEN_HEIGHT / 2 + 150));
 	_money->setAnchorPoint(Vec2(1.0f, 0.5f));
 	this->addChild(_money);
@@ -43,15 +43,15 @@ bool RandomBoxPopUp::init(Node* parent)
 	Button* buyButton = Button::create("random/BuyButton.png", Color3B(125, 125, 125));
 	buyButton->click = [=]()
 	{
-		//int count = UserDefault::getInstance()->getIntegerForKey("ItemCount");
-		//int money = GameManager::getInstance()->getMoney();
-		//if (money < 100 || count >= itemSet->getVector().size())
-		//{
-		//	SimpleAudioEngine::getInstance()->playEffect("sound/Error.ogg");
-		//	return;
-		//}
-		//SimpleAudioEngine::getInstance()->playEffect("sound/boxOpen.ogg");
-		//GameManager::getInstance()->minusMoney(100);
+		int count = UserDefault::getInstance()->getIntegerForKey("ItemCount");
+		int money = GameManager::getInstance()->getMoney();
+		if (money < 100 || count >= itemSet->getVector().size())
+		{
+			SimpleAudioEngine::getInstance()->playEffect("sound/Error.ogg");
+			return;
+		}
+		SimpleAudioEngine::getInstance()->playEffect("sound/boxOpen.ogg");
+		GameManager::getInstance()->minusMoney(100);
 
 		std::stringstream ss;
 		ss << GameManager::getInstance()->getMoney();

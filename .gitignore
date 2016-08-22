@@ -8,7 +8,7 @@ proj.linux/
 proj.tizen/
 proj.win8.1-universal/
 proj.win10/
-
+*.apk
 ### Cocos2dx ###
 # Ignore thumbnails created by windows
 Thumbs.db

@@ -31,6 +31,10 @@ bool BoxResultPopUp::init(Node* parent)
 			}
 		}
 	}
+	else
+	{
+		UserDefault::getInstance()->setBoolForKey(itemName.c_str(), true);
+	}
 
 	int count = UserDefault::getInstance()->getIntegerForKey("ItemCount");
 	UserDefault::getInstance()->setIntegerForKey("ItemCount", count + 1);

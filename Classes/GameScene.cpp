@@ -184,17 +184,17 @@ bool GameScene::init()
 	trophy->setPosition(Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 200));
 	resultLayer->addChild(trophy);
 
-	bestScore = LabelTTF::create("", "font/verdana.ttf", 44.0f);
+	bestScore = LabelTTF::create("", "fonts/verdana.ttf", 44.0f);
 	bestScore->setPosition(Vec2(SCREEN_WIDTH / 2 + 40, SCREEN_HEIGHT / 2 - 65));
 	bestScore->setAnchorPoint(Vec2(0.0f, 0.5f));
 	resultLayer->addChild(bestScore);
 
-	score = LabelTTF::create("", "font/verdana.ttf", 44.0f);
+	score = LabelTTF::create("", "fonts/verdana.ttf", 44.0f);
 	score->setPosition(Vec2(SCREEN_WIDTH / 2 + 40, SCREEN_HEIGHT / 2 - 145));
 	score->setAnchorPoint(Vec2(0.0f, 0.5f));
 	resultLayer->addChild(score);
 
-	obtain = LabelTTF::create("", "font/verdana.ttf", 44.0f);
+	obtain = LabelTTF::create("", "fonts/verdana.ttf", 44.0f);
 	obtain->setPosition(Vec2(SCREEN_WIDTH / 2 + 40, SCREEN_HEIGHT / 2 - 235));
 	obtain->setAnchorPoint(Vec2(0.0f, 0.5f));
 	resultLayer->addChild(obtain);
