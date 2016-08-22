@@ -163,6 +163,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\ItemSet.cpp" />
     <ClCompile Include="..\Classes\LandmarkCollectionPopUp.cpp" />
     <ClCompile Include="..\Classes\MainPopUp.cpp" />
+    <ClCompile Include="..\Classes\OutPopUp.cpp" />
     <ClCompile Include="..\Classes\PopUp.cpp" />
     <ClCompile Include="..\Classes\PopUpManager.cpp" />
     <ClCompile Include="..\Classes\QuestPopUp.cpp" />
@@ -193,6 +194,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\ItemSet.h" />
     <ClInclude Include="..\Classes\LandmarkCollectionPopUp.h" />
     <ClInclude Include="..\Classes\MainPopUp.h" />
+    <ClInclude Include="..\Classes\OutPopUp.h" />
     <ClInclude Include="..\Classes\PopUp.h" />
     <ClInclude Include="..\Classes\PopUpManager.h" />
     <ClInclude Include="..\Classes\QuestPopUp.h" />

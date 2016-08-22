@@ -27,6 +27,8 @@ private:
 	void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event) override;
 	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event) override;
 
+	void onKeyPressed(cocos2d::EventKeyboard::KeyCode keycode, cocos2d::Event* event) override;
+
 	void update(float dt);
 
 };

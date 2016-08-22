@@ -114,6 +114,9 @@
     <ClCompile Include="..\Classes\CollectionSelectPopUp.cpp">
       <Filter>src\Object\PopUps</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\OutPopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -201,6 +204,9 @@
       <Filter>src\Object\PopUps</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\CAndFCollectionPopUp.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\OutPopUp.h">
       <Filter>src\Object\PopUps</Filter>
     </ClInclude>
   </ItemGroup>

@@ -42,7 +42,7 @@ bool LandmarkCollectionPopUp::init(Node* parent)
     left = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
     left->click = [=]()
     {
-		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.mp3");
         index = ((index - 1) + data->size() )% data->size();
         update();
     };
@@ -54,7 +54,7 @@ bool LandmarkCollectionPopUp::init(Node* parent)
     right = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
     right->click = [=]()
     {
-		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.mp3");
         index = (index + 1) % data->size();
         update();
     };
@@ -81,7 +81,7 @@ bool LandmarkCollectionPopUp::init(Node* parent)
     pictureClickArea->click = [=]()
     {
         if(!data->isUnlocked(index)){
-			SimpleAudioEngine::getInstance()->playEffect("sound/Error.ogg");
+			SimpleAudioEngine::getInstance()->playEffect("sound/Error.mp3");
             return;
         }
         else if(!isDetail){
@@ -92,7 +92,7 @@ bool LandmarkCollectionPopUp::init(Node* parent)
             picture->setColor(Color3B(255,255,255));
             descriptionLabel->setOpacity(0.0f);
         }
-		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.mp3");
         isDetail = !isDetail;
     };
     pictureClickArea->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 90);
@@ -107,7 +107,7 @@ bool LandmarkCollectionPopUp::init(Node* parent)
     Button* closeButton = Button::create("pause/Cancel.png", Color3B(125, 125, 125));
     closeButton->click = [=]()
     {
-		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.mp3");
         PopUpManager::getInstance()->closePopUp();
     };
     closeButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);

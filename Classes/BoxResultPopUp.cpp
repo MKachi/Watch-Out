@@ -58,7 +58,7 @@ bool BoxResultPopUp::init(Node* parent)
 	Button* cancelButton = Button::create("result/ConfirmButton.png", Color3B(125, 125, 125));
 	cancelButton->click = [=]()
 	{
-		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.mp3");
 		PopUpManager::getInstance()->closePopUp();
 	};
 	cancelButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);

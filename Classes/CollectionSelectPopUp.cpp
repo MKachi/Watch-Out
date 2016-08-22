@@ -23,7 +23,7 @@ bool cocos2d::CollectionSelectPopUp::init(Node* parent)
     Button* foodButton = Button::create("collections/Food Button.png", Color3B(125, 125, 125));
     foodButton->click = [=]()
     {
-		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.mp3");
         PopUpManager::getInstance() -> openPopUp(FoodCollectionPopUp::create(parent));
         // Show TeamSetting
     };
@@ -34,7 +34,7 @@ bool cocos2d::CollectionSelectPopUp::init(Node* parent)
     Button* landmarkButton = Button::create("collections/Landmark Button.png", Color3B(125, 125, 125));
     landmarkButton->click = [=]()
     {
-		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.mp3");
         PopUpManager::getInstance() -> openPopUp(LandmarkCollectionPopUp::create(parent));
     };
     landmarkButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 70);
@@ -44,7 +44,7 @@ bool cocos2d::CollectionSelectPopUp::init(Node* parent)
     Button* CAndFButton = Button::create("collections/Clothes and Festival Button.png", Color3B(125, 125, 125));
     CAndFButton->click = [=]()
     {
-		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.mp3");
         PopUpManager::getInstance() -> openPopUp(CAndFCollectionPopUp::create(parent));
         // Show RandomBox
     };
@@ -55,7 +55,7 @@ bool cocos2d::CollectionSelectPopUp::init(Node* parent)
     Button* closeButton = Button::create("collections/Cancel.png", Color3B(125, 125, 125));
     closeButton->click = [=]()
     {
-		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.mp3");
         PopUpManager::getInstance()->closePopUp();
     };
     closeButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);

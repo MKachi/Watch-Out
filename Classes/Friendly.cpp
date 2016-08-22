@@ -115,18 +115,18 @@ void Friendly::die(bool left)
 	_particle->setScale(0.5f);
 	this->addChild(_particle);
 
-	SimpleAudioEngine::getInstance()->playEffect("sound/carCrash.ogg");
+	SimpleAudioEngine::getInstance()->playEffect("sound/carCrash.mp3");
 	switch (GameManager::getInstance()->getSelectCountrys(_friendlyID))
 	{
 	case Korea:
 	case China:
 	case Peru:
-		SimpleAudioEngine::getInstance()->playEffect("sound/menDie.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/menDie.mp3");
 		break;
 	case Japan:
 	case Philippines:
 	case Vietnam:
-		SimpleAudioEngine::getInstance()->playEffect("sound/womenDie.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/womenDie.mp3");
 		break;
 	}
 

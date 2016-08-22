@@ -47,10 +47,10 @@ bool RandomBoxPopUp::init(Node* parent)
 		int money = GameManager::getInstance()->getMoney();
 		if (money < 100 || count >= itemSet->getVector().size())
 		{
-			SimpleAudioEngine::getInstance()->playEffect("sound/Error.ogg");
+			SimpleAudioEngine::getInstance()->playEffect("sound/Error.mp3");
 			return;
 		}
-		SimpleAudioEngine::getInstance()->playEffect("sound/boxOpen.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/boxOpen.mp3");
 		GameManager::getInstance()->minusMoney(100);
 
 		std::stringstream ss;
@@ -72,7 +72,7 @@ bool RandomBoxPopUp::init(Node* parent)
 	Button* cancelButton = Button::create("pause/Cancel.png", Color3B(125, 125, 125));
 	cancelButton->click = [=]()
 	{
-		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.ogg");
+		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.mp3");
 		PopUpManager::getInstance()->closePopUp();
 	};
 	cancelButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);
