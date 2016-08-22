@@ -303,6 +303,7 @@ ipch/
 *.cachefile
 *.VC.db
 *.VC.VC.opendb
+*.keystore
 
 # Visual Studio profiler
 *.psess

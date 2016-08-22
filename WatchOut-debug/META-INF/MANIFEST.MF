@@ -1,0 +1,549 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: assets/sound/cancelButton.ogg
+SHA1-Digest: yzDf18yt7mePikc0DDrThA2UvsI=
+
+Name: assets/collections/Landmark/GoldenPavilion_Name.png
+SHA1-Digest: Kd7fSXYEF6nIOUWYgVKs61LQbGM=
+
+Name: assets/collections/Food/NasiLemak.png
+SHA1-Digest: RHX3T+kr+7Y/zgzZ5Stikns6WhM=
+
+Name: assets/friendly/char-vt.csb
+SHA1-Digest: jgHC898tlnvHuVs6YvEXUiUPmH4=
+
+Name: assets/result/Silver.png
+SHA1-Digest: /aX/YHJwOjIzRsHxUj3JXoFRHI4=
+
+Name: assets/teamSetting/3P_Peru.png
+SHA1-Digest: XwP8UF0VsKHOPtegYXoJwlU47mU=
+
+Name: assets/Question/RandomBoxText.png
+SHA1-Digest: ZiBzSSQMnCa6Q0vawToRKWcDtRs=
+
+Name: assets/collections/Landmark/AguinaldoShrine_Name.png
+SHA1-Digest: sPIwYsMmA6BiUPdFXqwKoAYMhV8=
+
+Name: assets/teamSetting/3P_Vietnam.png
+SHA1-Digest: +fjj8z4/GbjDp2/PBu5uz52jzvE=
+
+Name: assets/collections/C&F/Hanfu.png
+SHA1-Digest: 7ZU8CUii8KwKFiiLjchDwPzAO54=
+
+Name: assets/friendly/char-kr.csb
+SHA1-Digest: pi/OSnrjHNhAnSEic6Tc6IrH5/M=
+
+Name: assets/random/BoxFonts.png
+SHA1-Digest: ZC1V+Ja2rabnD3n4wCLCijeDzwA=
+
+Name: assets/collections/C&F/Hanbok.png
+SHA1-Digest: TBIkWLg7YazJoHQ3BZk9PoCWfcE=
+
+Name: assets/mainPopUp/TeamSetting.png
+SHA1-Digest: oNHdbR5ptKrjvU0ezxwO2ke0tuw=
+
+Name: assets/collections/C&F/Kimono.png
+SHA1-Digest: JzxziFBsU/ABxgO8HUUGiwCkNVg=
+
+Name: assets/pause/Retry.png
+SHA1-Digest: jHaJildOjTNCZ4qGmv32aY7WkE4=
+
+Name: assets/collections/Food/Kimchi.png
+SHA1-Digest: cF1+Co47D0y9I+7S0NbwV6kyTYU=
+
+Name: assets/tutorial/Tutorial_3.png
+SHA1-Digest: kRurVWJ4afyLkme/pEzP0ZzbWJ4=
+
+Name: assets/friendly/char-jp-pack.plist
+SHA1-Digest: 8FnxFLOAkDpwIpdWpTQxQWtfEzk=
+
+Name: assets/Background3.png
+SHA1-Digest: H60HmdCkFI/tTEjta2PwipcXlrY=
+
+Name: assets/teamSetting/1P_China.png
+SHA1-Digest: iMAsyL218uGCDIWruCqmhO0bXdk=
+
+Name: assets/friendly/char-pu.csb
+SHA1-Digest: +iNxa2DKHCIVjg1pIHd8Ra+dih8=
+
+Name: assets/collections/C&F/NebutMatsuri_Name.png
+SHA1-Digest: wGZoNlASpx/fboEjyuYyYTk9uVg=
+
+Name: assets/collections/Food/Bulgogi_Name.png
+SHA1-Digest: dKLdQ+03YF05ONo7ww+R3VVvF18=
+
+Name: assets/collections/Landmark/ForbiddenCity.png
+SHA1-Digest: IxennQT3nHf1G3hkOgJLVhlwJrQ=
+
+Name: assets/collections/Landmark/Gyeongbokkung.png
+SHA1-Digest: UBKu6L77dbwdqy0pcWbsfV14Efc=
+
+Name: assets/fonts/verdana.ttf
+SHA1-Digest: vpMuDIQXLjpWMyyRCspwi+AyNAE=
+
+Name: assets/collections/Landmark/GreatWall.png
+SHA1-Digest: /rHqbBS0EWEoD0iPWptn6g+6oKI=
+
+Name: assets/teamSetting/2P_Peru.png
+SHA1-Digest: pZXwpIDEZEHTdnZZsUgK0DhbQsM=
+
+Name: assets/collections/Landmark.plist
+SHA1-Digest: wbxC/BVFh7QQLHMxUMG38MuWvDc=
+
+Name: assets/collections/Food/PekingDuck.png
+SHA1-Digest: 6O7J4XZkBx9rO9HGe3sow4lhiUA=
+
+Name: assets/Car2.png
+SHA1-Digest: 5CeGm1qevNkIwO0KfeFP5PxiqvM=
+
+Name: assets/fonts/font.png
+SHA1-Digest: sCD0iFJNQr1qzsnkQVo0+i3BgsA=
+
+Name: assets/title/helpButton.png
+SHA1-Digest: ImXSef+A05kWMEfihLfOgnQOvF8=
+
+Name: assets/collections/C&F/PhaNung.png
+SHA1-Digest: Zdsc6hmHZa8H91dWJhB0KPQ80dM=
+
+Name: assets/friendly/char-pp-pack.plist
+SHA1-Digest: irufXVMRQyVl0GlQvqu6Kw6q0H8=
+
+Name: assets/collections/C&F/PhaNung_Name.png
+SHA1-Digest: R0C2usbWM+wmsHLxGcz4bKaUEug=
+
+Name: resources.arsc
+SHA1-Digest: ODKoPpe12wAlW/8WS/tnEyv7t0M=
+
+Name: assets/result/Bronze.png
+SHA1-Digest: Rnt1zCLxyAcqe0h4MHCVuy2+9Fc=
+
+Name: assets/tutorial/Tutorial_1.png
+SHA1-Digest: 1T8GYPcEWBHtD3Io2yvqEwByusg=
+
+Name: assets/collections/Landmark/MachuPicchu.png
+SHA1-Digest: RQdZPTe3lhZRFloo24zogf1e7EU=
+
+Name: assets/teamSetting/3P_Text.png
+SHA1-Digest: ROtdf6Xt8805JOK+gnURCUqe0i8=
+
+Name: assets/teamSetting/Arrow.png
+SHA1-Digest: WqJf7yeh1Q3Zd6M8DBjiMt976MY=
+
+Name: assets/title/title_background.png
+SHA1-Digest: f/snJnjzy4B4plEFa8eU2rws09g=
+
+Name: AndroidManifest.xml
+SHA1-Digest: SpHUVsikPjC5neSBqWGlp6Xmr3Q=
+
+Name: assets/friendly/char-kr-pack.plist
+SHA1-Digest: YHT5dcQgFy0HKVk5XYNH/UgV8AQ=
+
+Name: assets/collections/C&F/Songkran.png
+SHA1-Digest: JqR3J4ps9who75XBoxgBd051jLM=
+
+Name: assets/pause/Menu.png
+SHA1-Digest: 9kU9GVr9JPLyUb3IQUmHFhNWDgE=
+
+Name: assets/teamSetting/1P_Japan.png
+SHA1-Digest: ZcLjMkFR7I0KlndQWGjIYfh6npo=
+
+Name: assets/sound/boxOpen.ogg
+SHA1-Digest: oIcCnjXCP2WnOb5xcNiZKE9hEHE=
+
+Name: assets/result/ConfirmButton.png
+SHA1-Digest: 7/MpKPc6b/LJVJRiOLsLftqvOfQ=
+
+Name: assets/collections/C&F/NebutMatsuri.png
+SHA1-Digest: RujgbXDSGZlan0EmpxWr4542TIQ=
+
+Name: assets/friendly/char-pu-pack.plist
+SHA1-Digest: VcFSu16zbTvjwKv5kjTBSgZJBvw=
+
+Name: assets/teamSetting/1P_Peru.png
+SHA1-Digest: SaTxJXBvlaVXRdk6AOKNv0t7zCA=
+
+Name: assets/title/mainPopUpButton.png
+SHA1-Digest: yPYWD7r2AGKLqZs3yRrCUaeQVT4=
+
+Name: assets/teamSetting/2P_China.png
+SHA1-Digest: ka8xAy8KcMoaHU5C1p1xSNZktME=
+
+Name: assets/teamSetting/2P_Vietnam.png
+SHA1-Digest: 71KlXvjOXY7nd7E3X26r16ja93U=
+
+Name: assets/Temp_Pause.png
+SHA1-Digest: e2BDHZKsyGp5le07tR0qZ17OqjA=
+
+Name: assets/collections/Landmark/AFamosa_Name.png
+SHA1-Digest: zqnAldv5BPy7f3H+3BczHI3KPS4=
+
+Name: assets/collections/Landmark/AFamosa.png
+SHA1-Digest: sLY4qV0JKWrW+w6Lu3i+dOasB3Q=
+
+Name: assets/friendly/char-pp.csb
+SHA1-Digest: h5TSHCg8kvYXxWYJ7TqSDmwYtIM=
+
+Name: assets/Question/RandomBoxButton.png
+SHA1-Digest: y+AVWMCAoTFhPkr9JA+qz6wf/Wk=
+
+Name: assets/collections/Food/Bulgogi.png
+SHA1-Digest: H93eMkM8zOuwONdzcJ9AHarVrVY=
+
+Name: assets/sound/Stage3.ogg
+SHA1-Digest: vHge88XXXK8XWtz/RF+3+QV2m2k=
+
+Name: assets/collections/Landmark/Gyeongbokkung_Name.png
+SHA1-Digest: ORG+j9ekZoklZyQ7ypfYGEeic3Q=
+
+Name: assets/teamSetting/2P_Text.png
+SHA1-Digest: BheSWWppMhZX1SK75VyG9xdFVQo=
+
+Name: assets/friendly/char-jp.csb
+SHA1-Digest: 6P7WBfi9b3LjHb0lk/lo/Z2Leo8=
+
+Name: assets/teamSetting/1P_Philippines.png
+SHA1-Digest: +60lMXCbVab797ttDD+r5zHml0Q=
+
+Name: assets/teamSetting/3P_Korea.png
+SHA1-Digest: KQ+hBZzGep1My+4JxJcdcXwD9tA=
+
+Name: assets/collections/Food/PekingDuck_Name.png
+SHA1-Digest: wYRgNEGVVdivr8D4/G8ft/++B10=
+
+Name: assets/random/moneyIcon.png
+SHA1-Digest: ddrD0rBqK4v+SyDDuIBvY0TCYN0=
+
+Name: assets/friendly/char-pp-pack.png
+SHA1-Digest: y4tOT3PfsEGY298bp/Zseaj8wGs=
+
+Name: assets/teamSetting/1P_Korea.png
+SHA1-Digest: vzZRwQ2LlGBbFDLH9Y5GA9+h5uU=
+
+Name: assets/Temp_Platform.png
+SHA1-Digest: WTRtQlwJ3ZIqwu4oq+iEqSAokxM=
+
+Name: assets/collections/Food/Anticuchos_Name.png
+SHA1-Digest: LTm98cbhpD7DWjGmH3bdb+q8woM=
+
+Name: assets/collections/Food/Bunbo_Name.png
+SHA1-Digest: qA//3DY1AMVtZgSmbuSyRJ3p+kI=
+
+Name: assets/collections/Landmark/LinhSonPagoda.png
+SHA1-Digest: /L0bpntQt/U4H+o+PGifyEDE0xQ=
+
+Name: assets/sound/menDie.ogg
+SHA1-Digest: Q/XNfqrYZmYXwOg5RDpkfN4E3Fo=
+
+Name: assets/pause/Frame.png
+SHA1-Digest: 5pCyVfltdETGGoUK8zb3BUGoZD4=
+
+Name: assets/collections/C&F/Dano_Name.png
+SHA1-Digest: U6Cr1BLy4hXuNbnCqikQw2k6AAk=
+
+Name: assets/teamSetting/2P_Japan.png
+SHA1-Digest: qH8KywYmkrurp7e+1aehYIUABkY=
+
+Name: assets/collections/C&F/IntiRaymi.png
+SHA1-Digest: sfNHMJncVJAS78Vcunai+zoydYM=
+
+Name: assets/collections/C&F/Songkran_Name.png
+SHA1-Digest: hj0M96MEb9xVGjhVcDBQrmsGIm4=
+
+Name: assets/collections/Landmark/SummerPalace_Name.png
+SHA1-Digest: yHUnIJbihn+1fRbYdYTLF7RQ/gM=
+
+Name: assets/teamSetting/2P_Korea.png
+SHA1-Digest: D3+nBLNWG45Zvl2apCAUfkkFhWg=
+
+Name: assets/tutorial/Tutorial_5.png
+SHA1-Digest: xOWL7kbanJ3z2E4QlbrlyT1kkd0=
+
+Name: lib/armeabi/gdbserver
+SHA1-Digest: 57a1///5wfiTcaA+Op5QBZMyW9c=
+
+Name: assets/teamSetting/3P_Japan.png
+SHA1-Digest: CWU0W/BGxtrs2F2tMGvipisssTo=
+
+Name: assets/collections/C&F/Panagbenga.png
+SHA1-Digest: ghTXOINBKb38YBhpa3+o0mRVc8s=
+
+Name: assets/pause/Cancel.png
+SHA1-Digest: J8IvYRHAE4On47Dh/WmjbNc8CzA=
+
+Name: res/drawable-mdpi-v4/icon.png
+SHA1-Digest: +PaUWIrsh1sasLP1cRaCuk95I10=
+
+Name: assets/collections/C&F/FiestaPatrias.png
+SHA1-Digest: SEdTA+mA1vRZ70PENMFtEzfhjxU=
+
+Name: assets/friendly/char-jp-pack.png
+SHA1-Digest: jFbmi/5f4flmPMj5qSLM46NkvAc=
+
+Name: assets/Background1.png
+SHA1-Digest: 3QdsTamY/xXSsbNLZ7eFNy2OnjU=
+
+Name: assets/collections/Food/Sushi_Name.png
+SHA1-Digest: 9p/cs3WQCtc4ExNacXDTWHcmksM=
+
+Name: assets/collections/Landmark/GoldenPavilion.png
+SHA1-Digest: XeJDrUxknKvzEZFxNQH5M080pBQ=
+
+Name: assets/friendly/char-vt-pack.plist
+SHA1-Digest: CjmFVFWw4D8+ZoedH38/ZbSBfm8=
+
+Name: assets/random/BigBox.png
+SHA1-Digest: x5OHrgLhy1MRVB/fflz44OEjT2k=
+
+Name: assets/collections/Landmark/ForbiddenCity_Name.png
+SHA1-Digest: jQJ0yeq4wK1TubvrL0iDc730b08=
+
+Name: assets/sound/button.ogg
+SHA1-Digest: yESzSSb9bXlat3lb9xJRhAGBQ5g=
+
+Name: assets/friendly/char-cn-pack.png
+SHA1-Digest: 1+8Yk4Rf0GgATe/RXXDgtSs0nKk=
+
+Name: assets/collections/Landmark/TerracottaArmy_Name.png
+SHA1-Digest: Lzmveoi5JlBUoQ5kxqL5Ds4RPvA=
+
+Name: assets/random/sample.png
+SHA1-Digest: O6VUJEjgXSYB0czUTsoxNlNxPso=
+
+Name: res/drawable-hdpi-v4/icon.png
+SHA1-Digest: +PaUWIrsh1sasLP1cRaCuk95I10=
+
+Name: assets/tutorial/Tutorial_4.png
+SHA1-Digest: LNjJ7vYVGhSHXYewKjU6QqUhq7w=
+
+Name: assets/collections/Landmark/GreatWall_Name.png
+SHA1-Digest: ah5TKvvlHjcU5NkqPYdtEf3Qu1Q=
+
+Name: assets/teamSetting/1P_Vietnam.png
+SHA1-Digest: O0suj/hFSDp0k8LMSVI+o7Vsbzs=
+
+Name: assets/collections/Food/NasiLemak_Name.png
+SHA1-Digest: HyQPvgybvwlOed4sCSk2igK4Nf4=
+
+Name: assets/friendly/char-pu-pack.png
+SHA1-Digest: hbcUHq6e1/4AA8/IApGxT9YbIts=
+
+Name: assets/collections/Landmark/Cheomseongdae.png
+SHA1-Digest: JxqkbY9ql6sVnw5s9n79FyZa4xs=
+
+Name: assets/title/playButton.png
+SHA1-Digest: ykDglVYkRj9X8TDyNlSfLd+IMEQ=
+
+Name: assets/collections/Food/Bunbo.png
+SHA1-Digest: OvEN2zGphkMne6yw6L/iRzwrvtM=
+
+Name: assets/collections/Food.plist
+SHA1-Digest: 8KZgAe2+GBSNsNQf1he8RbRN7KA=
+
+Name: assets/friendly/char-cn-pack.plist
+SHA1-Digest: ONsKMaXquhlbdBY4/bEALjl4xc8=
+
+Name: assets/collections/C&F/Panagbenga_Name.png
+SHA1-Digest: pcFHy+J2ouBkmE9ApeUl6FN7mKY=
+
+Name: assets/collections/Food/Pho.png
+SHA1-Digest: qwIm3rGkUN/VMgDKaXOB6iyAOHU=
+
+Name: assets/collections/Food/Pho_Name.png
+SHA1-Digest: I2Kf9/y8CZzyqO/EfQLwVvq7zLc=
+
+Name: assets/collections/Food/Sushi.png
+SHA1-Digest: nhS+3/bb/nLZRPbtK92akkpTrhw=
+
+Name: assets/collections/Landmark/MachuPicchu_Name.png
+SHA1-Digest: ixX+uZVyrpaXTyd/6VxtsBKW2ws=
+
+Name: assets/random/resultTitle.png
+SHA1-Digest: k34/TZf7tFzhRKHqLSntbZDfn4Y=
+
+Name: assets/title/titleText.png
+SHA1-Digest: qrRo62fB8cET82rZWA30swS5d6E=
+
+Name: assets/Car1.png
+SHA1-Digest: +AXFfYLKt/eofIs4esT6mQLjsoc=
+
+Name: assets/PopUpFrame.png
+SHA1-Digest: FrPkC5Ks3W7uDpfsC2dKFlMGexI=
+
+Name: assets/sound/womenDie.ogg
+SHA1-Digest: P7H4CLAdKMkn+0wtjbL+tbdAjPk=
+
+Name: assets/collections/Food/Anticuchos.png
+SHA1-Digest: lE0xQGYsk0dnup3NgKWzpcUEuJ0=
+
+Name: assets/tutorial/Tutorial_2.png
+SHA1-Digest: m6aBLzRrQXaF4qkyjZMmE/Lv0Q0=
+
+Name: assets/collections/Food/TumYum_Name.png
+SHA1-Digest: Tv20OH+3XMZLqTQ1oBKH0xGXDj4=
+
+Name: assets/fonts/font.fnt
+SHA1-Digest: uhbYM3h6QI0hAON/M3ebx3DiJww=
+
+Name: assets/teamSetting/3P_China.png
+SHA1-Digest: Rd2v1B58KbfIuZ/4aafWksWXJaY=
+
+Name: assets/collections/C&F/Hanfu_Name.png
+SHA1-Digest: oH4URBYwfUIvDwE58B3ed+4BItk=
+
+Name: assets/collections/Food/Tapas.png
+SHA1-Digest: oLpMQUonwDd+zihCBjS2L+gFxBA=
+
+Name: assets/random/BuyButton.png
+SHA1-Digest: LOgnfU66DAyKeqV7MSGcesyuL10=
+
+Name: assets/collections/Food/Adobo.png
+SHA1-Digest: 54s2A2DSXIiYWZ8w2mneDDFA2+I=
+
+Name: assets/Question/Developers.png
+SHA1-Digest: aTudi6x5/DAksXh9Y8pttj25Seg=
+
+Name: assets/sound/Stage1.ogg
+SHA1-Digest: LMS8DbLH+11Szce45rWBYtacx1Q=
+
+Name: assets/collections/Landmark/Cheomseongdae_Name.png
+SHA1-Digest: zzQyxwYfJZCb4dYhLKhsGV+v1iI=
+
+Name: assets/Car3.png
+SHA1-Digest: O5srX3I5Ky/ojP6LcWWwCHA+mA8=
+
+Name: assets/collections/Food/Adobo_Name.png
+SHA1-Digest: NUydeZGrkZTVSZslzYWX812VOug=
+
+Name: assets/sound/Error.ogg
+SHA1-Digest: MnijTIlG1YniJQJGdHZWrMoqiaQ=
+
+Name: assets/collections/Food/TumYum.png
+SHA1-Digest: Xm5g0qPVQQKOcknwM5N7ckPrqI4=
+
+Name: assets/sound/resultWindow.ogg
+SHA1-Digest: XhAjX+XMG0P3heta9bCgLiGGQ6Y=
+
+Name: assets/collections/Food/KaengPhet_Name.png
+SHA1-Digest: P4yVI9ZJJGGFxUGWG/enl7BDGi8=
+
+Name: assets/teamSetting/3P_Philippines.png
+SHA1-Digest: S/PW/1BffWo4O6wsG3dWjfz9E5M=
+
+Name: assets/sound/Stage2.ogg
+SHA1-Digest: Nbc6LIaCWlnG/KHWM7ciKxfatdo=
+
+Name: res/drawable-ldpi-v4/icon.png
+SHA1-Digest: +PaUWIrsh1sasLP1cRaCuk95I10=
+
+Name: assets/friendly/char-kr-pack.png
+SHA1-Digest: i6anL9z8ly4mL15S4H0vGqXx8CQ=
+
+Name: assets/collections/C&F/IntiRaymi_Name.png
+SHA1-Digest: g4nZshiXvgCjouHE/nx767jrYWs=
+
+Name: assets/collections/C&F/Hanbok_Name.png
+SHA1-Digest: oZBYc7C2z10IlVXwjjK59f2eVj8=
+
+Name: assets/result/result_title.png
+SHA1-Digest: riizPuEMA4SYVJSfElJpoDK7hVg=
+
+Name: assets/sound/carCrash.ogg
+SHA1-Digest: +8jcmDM5Lw0OHrymqqcUGfT6NKs=
+
+Name: assets/teamSetting/2P_Philippines.png
+SHA1-Digest: Tpya4lapo9ZFF59z2o60Ozfqt0g=
+
+Name: assets/collections/Landmark/LinhSonPagoda_Name.png
+SHA1-Digest: iz2FStojV/Hf24rQSLAbTbSOcbE=
+
+Name: assets/Question/DeveloperButton.png
+SHA1-Digest: C9FKljshUKqtPqjnRwK98HhS2vc=
+
+Name: assets/collections/Landmark/AguinaldoShrine.png
+SHA1-Digest: PuUK4paqs7JEnuYzjVsgZn+g8Pg=
+
+Name: assets/collections/C&F.plist
+SHA1-Digest: c87V4oip0zq0ZmQj73uGZXEkoN4=
+
+Name: assets/collections/C&F/Kimono_Name.png
+SHA1-Digest: LfjH+Nx/vSEwk18JOk5ZJDSig9s=
+
+Name: assets/result/Gold.png
+SHA1-Digest: lc5MI81ZSTtxFVaB8Gi4gQNT7PM=
+
+Name: assets/friendly/char-vt-pack.png
+SHA1-Digest: Dkcz2eKl2kXHun3c8ilwZyNelkg=
+
+Name: assets/tutorial/Tutorial_6.png
+SHA1-Digest: NlKmLzeaBr+F61tgcTJqe1hEXgU=
+
+Name: assets/collections/Landmark/Ayutthaya_Name.png
+SHA1-Digest: UnKnkKKK3Un3QQPqqCcybA4XTs8=
+
+Name: assets/random/sample2.png
+SHA1-Digest: IPh7EMng4Z4OmqOrfGVkE71tgiU=
+
+Name: assets/collections/C&F/Dano.png
+SHA1-Digest: K75SNUgnBRNCVdPixFormWpAwUw=
+
+Name: assets/collections/Food/KaengPhet.png
+SHA1-Digest: /zexs1zWMRyDo++wM0A+ACq2BXI=
+
+Name: assets/mainPopUp/Collection.png
+SHA1-Digest: z6mg/m/NEgYFMK8dDqt4aLF/F7U=
+
+Name: assets/title/Temp_Char.png
+SHA1-Digest: q27avU4ZZGE2qlTUpZQX8enMh1k=
+
+Name: assets/collections/Landmark/TerracottaArmy.png
+SHA1-Digest: on0wH4xEtQVDUnP28K7Pz1YuVc0=
+
+Name: assets/collections/C&F/Pollera.png
+SHA1-Digest: NqSLvSd7BPzK6TBuu2Rjhzfc2rA=
+
+Name: assets/friendly/char-cn.csb
+SHA1-Digest: 8/eyYwsSctFL1M0lwWs9ipafxnU=
+
+Name: assets/collections/Landmark/SummerPalace.png
+SHA1-Digest: alQ1q15G1yTEAc7FtJ4RAUJEXRw=
+
+Name: assets/Background2.png
+SHA1-Digest: dwh4pthahw/7FI1/K8jzCQ6O9sE=
+
+Name: assets/collections/Landmark/Ayutthaya.png
+SHA1-Digest: Tzgrf76WLv16dRX/rP3ce1cBFgo=
+
+Name: lib/armeabi/libMyGame.so
+SHA1-Digest: jgXUJYsg1iZph9BGChbyyQYeHI0=
+
+Name: assets/collections/Food/Kimchi_Name.png
+SHA1-Digest: 8ejorZrV/OyHpJKH6jkUm5O/p2Y=
+
+Name: assets/teamSetting/1P_Text.png
+SHA1-Digest: MHr4+A6Iwr4VGXWKpIzRXj7NPnM=
+
+Name: assets/mainPopUp/RandomBox.png
+SHA1-Digest: waqW8h/kLLsDdxDjULK+vD2XTAY=
+
+Name: assets/result/resultInfo.png
+SHA1-Digest: 90f/k9x8ePdAeXcCBaZgYf5661w=
+
+Name: assets/collections/Food/Tapas_Name.png
+SHA1-Digest: GD2MTPkvZ7akMaCNTNEAwSuWR7Q=
+
+Name: assets/TouchArea.png
+SHA1-Digest: 70juHRXgsmpi+4SF81mCMdo1EQM=
+
+Name: assets/collections/C&F/FiestaPatrias_Name.png
+SHA1-Digest: xOpHVBmx29he/hiB1LuHTbjMXlg=
+
+Name: assets/Question/TutorialButton.png
+SHA1-Digest: YMimQlBxakywz7s0kd3PzIosRLI=
+
+Name: assets/collections/C&F/Pollera_Name.png
+SHA1-Digest: 5fgzxQH6Bs7IS0pdZgptyEXNLd4=
+
+Name: classes.dex
+SHA1-Digest: 5dU4Q4XV0mVCGMvN6tibyqVTa10=
+
