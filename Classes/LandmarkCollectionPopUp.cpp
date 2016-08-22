@@ -80,16 +80,11 @@ bool LandmarkCollectionPopUp::init(Node* parent)
     pictureClickArea->setOpacity(0.0f);
     pictureClickArea->click = [=]()
     {
-<<<<<<< HEAD
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
         if(!data->isUnlocked(index)){
             return;
         }
         else if(!isDetail){
-=======
-		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
-        CCLOG("clicked");
-        if(!isDetail){
->>>>>>> origin/master
             picture->setColor(Color3B(125,125,125));
             descriptionLabel->setOpacity(255.0f);
         }

@@ -96,7 +96,7 @@ bool TeamPopUp::init(Node* parent)
 		int index = (int)GameManager::getInstance()->getSelectCountrys(1);
 		index += 1;
 
-		if (index > (int)Country::Philippines)
+		if (index > (int)Country::Vietnam)
 		{
 			index = 0;
 		}
@@ -116,7 +116,7 @@ bool TeamPopUp::init(Node* parent)
 		index -= 1;
 		if (index < 0)
 		{
-			index = (int)Country::Philippines;
+			index = (int)Country::Vietnam;
 		}
 		GameManager::getInstance()->setSelectCountrys(1, (Country)index);
 		player2Display->setTexture(_player2ImageName[index]);
@@ -150,7 +150,7 @@ bool TeamPopUp::init(Node* parent)
 		int index = (int)GameManager::getInstance()->getSelectCountrys(2);
 		index += 1;
 
-		if (index > (int)Country::Philippines)
+		if (index > (int)Country::Vietnam)
 		{
 			index = 0;
 		}
@@ -170,7 +170,7 @@ bool TeamPopUp::init(Node* parent)
 		index -= 1;
 		if (index < 0)
 		{
-			index = (int)Country::Philippines;
+			index = (int)Country::Vietnam;
 		}
 		GameManager::getInstance()->setSelectCountrys(2, (Country)index);
 		player3Display->setTexture(_player3ImageName[index]);
