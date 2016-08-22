@@ -81,8 +81,8 @@ bool CAndFCollectionPopUp::init(Node* parent)
     pictureClickArea->setOpacity(0.0f);
     pictureClickArea->click = [=]()
     {
-		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
         if(!data->isUnlocked(index)){
+			SimpleAudioEngine::getInstance()->playEffect("sound/Error.ogg");
             return;
         }
 		else if (!isDetail) 
@@ -95,6 +95,7 @@ bool CAndFCollectionPopUp::init(Node* parent)
 			picture->setColor(Color3B(255, 255, 255));
 			descriptionLabel->setOpacity(0.0f);
 		}
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
         isDetail = !isDetail;
     };
     pictureClickArea->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 90);
