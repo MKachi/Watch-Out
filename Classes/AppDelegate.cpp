@@ -35,7 +35,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 		glview = GLViewImpl::createWithRect("WatchOut", cocos2d::Rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT));
 		director->setOpenGLView(glview);
 	}
-	director->setDisplayStats(true);
+	director->setDisplayStats(SHOW_FPS);
 	director->setAnimationInterval(1.0f / 60);
 	
 //	glview->setFrameSize(SCREEN_WIDTH, SCREEN_HEIGHT);

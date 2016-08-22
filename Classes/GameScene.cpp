@@ -199,6 +199,10 @@ bool GameScene::init()
 	obtain->setAnchorPoint(Vec2(0.0f, 0.5f));
 	resultLayer->addChild(obtain);
 
+	Sprite* icon = Sprite::create("random/moneyIcon.png");
+	icon->setPosition(SCREEN_WIDTH / 2 + 180, SCREEN_HEIGHT / 2 - 235);
+	resultLayer->addChild(icon);
+
 	confirmButton = Button::create("result/ConfirmButton.png", Color3B(125, 125, 125));
 	confirmButton->setPosition(Vec2(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 425));
 	confirmButton->click = [=]()
