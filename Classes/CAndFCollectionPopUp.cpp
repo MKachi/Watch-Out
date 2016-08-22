@@ -39,9 +39,10 @@ bool CAndFCollectionPopUp::init(Node* parent)
     this->addChild(positionLabel,true,0);
     
     
-    left = Button::create("collectionPopUp/Arrow.png", Color3B(125, 125, 125));
+    left = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
     left->click = [=]()
     {
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
         index = ((index - 1) + data->size() )% data->size();
         update();
     };
@@ -51,9 +52,10 @@ bool CAndFCollectionPopUp::init(Node* parent)
     this->registeButton(left);
     
     
-    right = Button::create("collectionPopUp/Arrow.png", Color3B(125, 125, 125));
+    right = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
     right->click = [=]()
     {
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
         index = (index + 1) % data->size();
         update();
     };
@@ -79,7 +81,7 @@ bool CAndFCollectionPopUp::init(Node* parent)
     pictureClickArea->setOpacity(0.0f);
     pictureClickArea->click = [=]()
     {
-        CCLOG("clicked");
+		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
         if(!isDetail){
             picture->setColor(Color3B(125,125,125));
             descriptionLabel->setOpacity(255.0f);
@@ -99,9 +101,10 @@ bool CAndFCollectionPopUp::init(Node* parent)
     namePicture->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 -300);
     this->addChild(namePicture); // Node, Button is true, zOther
     
-    Button* closeButton = Button::create("collections/Cancel.png", Color3B(125, 125, 125));
+    Button* closeButton = Button::create("pause/Cancel.png", Color3B(125, 125, 125));
     closeButton->click = [=]()
     {
+		SimpleAudioEngine::getInstance()->playEffect("sound/cancelButton.ogg");
         PopUpManager::getInstance()->closePopUp();
     };
     closeButton->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 430);

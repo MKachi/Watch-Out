@@ -15,7 +15,7 @@ namespace cocos2d
 
 		ItemSet* _itemSet;
 
-		int RandomIndex();
+		int RandomIndex(int size);
 
 	};
 }
