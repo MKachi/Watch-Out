@@ -19,6 +19,7 @@ namespace cocos2d
 	{
 	private:
 		SkeletonObject* _object;
+		ParticleSystemQuad* _particle;
 		Country		_country;
 		Vec2		_backPosition;
 		int			_touchID;

@@ -109,6 +109,12 @@ void Friendly::die(bool left)
 	{
 		return;
 	}
+
+	_particle = ParticleSystemQuad::create("effect/boom.plist");
+	_particle->setPosition(Vec2(this->getContentSize().width / 2, this->getContentSize().height / 2));
+	_particle->setScale(0.5f);
+	this->addChild(_particle);
+
 	SimpleAudioEngine::getInstance()->playEffect("sound/carCrash.ogg");
 	switch (GameManager::getInstance()->getSelectCountrys(_friendlyID))
 	{
@@ -165,6 +171,7 @@ void Friendly::fadeOut(float dt)
 	{
 		unschedule(schedule_selector(Friendly::fadeOut));
 		this->setPosition(9999, 9999);
+		_particle->setVisible(false);
 		this->setVisible(false);
 	}
 
