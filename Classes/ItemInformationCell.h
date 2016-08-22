@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 #include <string>
+#include "cocos2d.h"
+
 namespace cocos2d {
     using std::string;
     struct ItemInformationCell{

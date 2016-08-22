@@ -102,6 +102,18 @@
     <ClCompile Include="..\Classes\BoxResultPopUp.cpp">
       <Filter>src\Object\PopUps</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\FoodCollectionPopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\LandmarkCollectionPopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CAndFCollectionPopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CollectionSelectPopUp.cpp">
+      <Filter>src\Object\PopUps</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -177,6 +189,18 @@
       <Filter>src\Object\PopUps</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\BoxResultPopUp.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CollectionSelectPopUp.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FoodCollectionPopUp.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LandmarkCollectionPopUp.h">
+      <Filter>src\Object\PopUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CAndFCollectionPopUp.h">
       <Filter>src\Object\PopUps</Filter>
     </ClInclude>
   </ItemGroup>

@@ -34,12 +34,12 @@ bool FoodCollectionPopUp::init(Node* parent)
     string tmpString = Value(index+1).asString() + "/" + Value((int)data->size()).asString();
     
     
-    positionLabel = LabelTTF::create(tmpString, "font/verdana.ttf", 63.0f);
+    positionLabel = LabelTTF::create(tmpString, "fonts/verdana.ttf", 63.0f);
     positionLabel->setPosition(SCREEN_WIDTH / 2,SCREEN_HEIGHT/2 + 480);
     this->addChild(positionLabel,true,0);
     
     
-    left = Button::create("collectionPopUp/Arrow.png", Color3B(125, 125, 125));
+    left = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
     left->click = [=]()
     {
         index = ((index - 1) + data->size() )% data->size();
@@ -51,7 +51,7 @@ bool FoodCollectionPopUp::init(Node* parent)
     this->registeButton(left);
     
     
-    right = Button::create("collectionPopUp/Arrow.png", Color3B(125, 125, 125));
+    right = Button::create("teamSetting/Arrow.png", Color3B(125, 125, 125));
     right->click = [=]()
     {
         index = (index + 1) % data->size();
@@ -99,7 +99,7 @@ bool FoodCollectionPopUp::init(Node* parent)
     namePicture->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 -300);
     this->addChild(namePicture); // Node, Button is true, zOther
     
-    Button* closeButton = Button::create("collections/Cancel.png", Color3B(125, 125, 125));
+    Button* closeButton = Button::create("pause/Cancel.png", Color3B(125, 125, 125));
     closeButton->click = [=]()
     {
         PopUpManager::getInstance()->closePopUp();

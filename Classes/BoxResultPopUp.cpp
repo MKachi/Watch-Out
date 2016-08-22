@@ -13,14 +13,17 @@ bool BoxResultPopUp::init(Node* parent)
 	}
 	parent->addChild(this);
 
+	int index = RandomIndex();
+
 	_itemSet = new ItemSet();
-	std::string itemName = _itemSet->getVector()[RandomIndex()]->name;
+	std::string itemName = _itemSet->getVector()[index]->name;
 
 	if (UserDefault::getInstance()->getBoolForKey(itemName.c_str()))
 	{
 		while (true)
 		{
-			itemName = _itemSet->getVector()[RandomIndex()]->name;
+			index = RandomIndex();
+			itemName = _itemSet->getVector()[index]->name;
 			if (!UserDefault::getInstance()->getBoolForKey(itemName.c_str()))
 			{
 				UserDefault::getInstance()->setBoolForKey(itemName.c_str(), true); // true : unlocked, false : lock
@@ -40,11 +43,11 @@ bool BoxResultPopUp::init(Node* parent)
 	title->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 470);
 	this->addChild(title);
 
-	Sprite* image = Sprite::create("random/sample.png");
+	Sprite* image = Sprite::create(_itemSet->getPictureDir(index));
 	image->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 90);
 	this->addChild(image);
 
-	Sprite* name = Sprite::create("random/sample2.png");
+	Sprite* name = Sprite::create(_itemSet->getNamePictureDir(index));
 	name->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 300);
 	this->addChild(name);
 

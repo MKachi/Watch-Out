@@ -3,6 +3,7 @@
 #include "UserRule.h"
 #include "TeamPopUp.h"
 #include "RandomBoxPopUp.h"
+#include "CollectionSelectPopUp.h"
 
 using namespace cocos2d;
 
@@ -34,7 +35,7 @@ bool MainPopUp::init(Node* parent)
 	{
 		SimpleAudioEngine::getInstance()->playEffect("sound/button.ogg");
 		// Show Collection
-		CCLOG("Test\n");
+		PopUpManager::getInstance()->openPopUp(CollectionSelectPopUp::create(parent));
 	};
 	collection->setPosition(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 70);
 	this->addChild(collection, true, 0);

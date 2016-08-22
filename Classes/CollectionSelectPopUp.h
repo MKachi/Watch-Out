@@ -14,7 +14,6 @@
 #include "PopUp.h"
 #include "UserRule.h"
 #include "PopUpManager.h"
-#include "CollectionPopUp.h"
 #include "LandmarkCollectionPopUp.h"
 #include "CAndFCollectionPopUp.h"
 #include "FoodCollectionPopUp.h"
