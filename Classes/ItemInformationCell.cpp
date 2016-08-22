@@ -8,14 +8,13 @@
 
 #include "ItemInformationCell.h"
 
-using namespace cocos2d;
-
-cocos2d::ItemInformationCell::ItemInformationCell(ValueMap& v){
+cocos2d::ItemInformationCell::ItemInformationCell(ValueMap& v,string _setdir){
     name = v["name"].asString();
     country = v["country"].asString();
     description = v["description"].asString();
     url = v["url"].asString();
     unlocked = true;
+    setdir = _setdir;
     CCLOG("%s\n",name.c_str());
 }
 

@@ -21,7 +21,7 @@ void cocos2d::ItemInformationDataSource::initDataFromFile(std::string setName){
     ValueVector array = F_Utils->getValueVectorFromFile(F_Path);
     for(int i = 0, j = (int)array.size();i < j ; i ++){
         ValueMap tmp = (ValueMap)array.at(i).asValueMap();
-        info.push_back(new ItemInformationCell(tmp));
+        info.push_back(new ItemInformationCell(tmp,setName));
     }
     sort();
 }

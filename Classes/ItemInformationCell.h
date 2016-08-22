@@ -11,18 +11,16 @@
 
 #include <stdio.h>
 #include <string>
-#include <vector>
-#include "cocos2d.h"
-
 namespace cocos2d {
     using std::string;
     struct ItemInformationCell{
         string name;
         string country;
         string description;
+        string setdir;
         string url;
         bool unlocked;
-        ItemInformationCell(ValueMap& v);
+        ItemInformationCell(ValueMap& v, string);
         
         /*bool operator < (const ItemInformationCell* b){
          if(unlocked == true && b->unlocked == false)
