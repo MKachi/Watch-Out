@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>Great Wall</string>
+		<string>GreatWall</string>
 		<key>country</key>
 		<string>China</string>
 		<key>description</key>
@@ -14,7 +14,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Machu Picchu</string>
+		<string>MachuPicchu</string>
 		<key>country</key>
 		<string>Peru</string>
 		<key>description</key>
@@ -44,7 +44,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Aguinaldo Shrine</string>
+		<string>AguinaldoShrine</string>
 		<key>country</key>
 		<string>Philippines</string>
 		<key>description</key>
@@ -54,7 +54,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>A Famosa</string>
+		<string>AFamosa</string>
 		<key>country</key>
 		<string>Malaysia</string>
 		<key>description</key>
@@ -64,7 +64,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Linh Sơn Pagoda</string>
+		<string>LinhSơnPagoda</string>
 		<key>country</key>
 		<string>Vietnam</string>
 		<key>description</key>
@@ -74,7 +74,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Summer Palace</string>
+		<string>SummerPalace</string>
 		<key>country</key>
 		<string>China</string>
 		<key>description</key>
@@ -84,7 +84,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Golden Pavilion</string>
+		<string>GoldenPavilion</string>
 		<key>country</key>
 		<string>Japan</string>
 		<key>description</key>
@@ -104,7 +104,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Forbidden City</string>
+		<string>ForbiddenCity</string>
 		<key>country</key>
 		<string>China</string>
 		<key>description</key>
@@ -114,7 +114,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Terracotta Army</string>
+		<string>TerracottaArmy</string>
 		<key>country</key>
 		<string>China</string>
 		<key>description</key>
